@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ша-Блюз</title>
+
+    <link rel="stylesheet" href="/styles/style.css">
+
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
+
+</head> 
+<body ng-app="shblues" ng-controller="mainController">
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script>
+     <!-- Angular app file -->
+    <script src="/scripts/angular-app.js"></script>
+
+    <!-- Controller file -->
+    <script src="/controllers/main.controller.js"></script>
+
+    <!-- B-52 font -->
+    <link href="http://allfont.ru/allfont.css?fonts=b52" rel="stylesheet" type="text/css" />
+    <!-- Ubuntu font -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+     
+    <div class="menu-block">
+        <div class="disco-container">
+            <img class="disco-img" src="/assets/disco.png" alt="Disco-Dingo Boogy-Woogy!">
+        </div>
+ 
+        <div class="menu-circle">
+            <div class="circle-white-border"></div>
+            <div class="circle-border-trimmer"></div>
+            <div class="center-circle"></div>
+
+            <div class="substract substract-internal substract-internal-left"></div>
+            <div class="substract substract-internal substract-internal-right"></div>
+
+            <div class="substract substract-external substract-external-left"></div>
+            <div class="substract substract-external substract-external-right"></div>
+
+            <img class="image-33-3" src="/assets/33,3.png" alt="33,3"> 
+
+            <img class="main-label" src="/assets/sh-blues-label.png" alt="Ша-Блюз"> 
+            <img class="heads-image" src="/assets/heads.png" alt="Two beauty heads :)"> 
+
+            <div class="menu-items-container">
+                <div class="menu-item" ng-repeat="item in menu" ng-click="scrollToAnchor(item.anchorId)">
+                    {{item.name}} ({{item.count}}) 
+                </div>
+            </div>
+
+            <div class="anonses-recommended">
+                <div class="rounded-notify">
+                    <img src="/assets/alert.png" alt="alert">
+                    <div>Анонсы</div>
+                </div>
+                <div class="rounded-notify">
+                    <img src="/assets/like.png" alt="alert">
+                    <div>Рекомендации</div> 
+                </div>
+            </div>
+
+        </div>
+
+        <div class="to-bottom-container">
+            <div class="to-bottom"></div>
+            <div class="to-bottom"></div>
+        </div>
+        
+        <img class="prickly-thing" src="/assets/qw.png" alt="Штука с иголкой для пластинок">
+
+    </div>
+
+</body>
+</html>

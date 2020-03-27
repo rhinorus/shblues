@@ -1,0 +1,289 @@
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+}
+
+h1{
+    font-size: 68px;
+    font-family: 'B52', arial;
+    color: white;
+}
+
+@keyframes rotate360 {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes move-move {
+    0% { transform: rotate(-20deg); }
+    20% { transform: rotate(3deg); }
+    40% {transform: rotate(-7deg);}
+    70% {transform: rotate(7deg);}
+    100% { transform: rotate(-20deg); } 
+}
+
+.menu-block{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-self: center; 
+    align-items: center;
+
+    height: calc(1546px - 400px); 
+    overflow: hidden;
+
+}   
+
+.disco-container{
+    position: relative;
+    height: calc(1546px - 400px); 
+}
+
+.disco-img{
+    position: absolute;
+    top: -400px;
+    height: 1546px;
+    left: -773px;
+
+    animation: 4s rotate360 infinite linear;
+}
+
+.menu-circle{
+
+    position: absolute;
+    top: 50px;
+
+    overflow: hidden;
+
+    background-color: #F76DAA;
+
+    height: 630px;
+    width: 630px;
+
+    border: 1px solid #F76DAA;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+
+}
+
+.circle-white-border{
+    width: 590px;
+    height: 590px;
+    border: 4px solid white;
+    border-radius: 50%;
+}
+
+.circle-border-trimmer{
+    position: absolute;
+    height: 267px;
+    width: 601px;
+    border-top-left-radius: 305px;
+    border-top-right-radius: 305px;
+    border: 4px solid #F76DAA;
+    top: 10px;
+    border-bottom-color: white;
+    background-color: #F76DAA;
+    box-sizing: border-box;
+}
+
+.center-circle{
+    position: absolute;
+
+    height: 50px;
+    width: 50px;
+
+    border-radius: 50%;
+
+    background-color: white;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0;
+
+    margin: auto;
+}
+
+.substract{
+    position: absolute;
+
+    border-radius: 50%;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0;
+ 
+    border-width: 0;
+    border-style: solid;
+
+    margin: auto;
+    transform: rotate(45deg);
+}
+
+.substract-internal{
+    height: 196px;
+    width: 196px;
+}
+
+.substract-external{
+    height: 202px;
+    width: 202px;
+}
+
+.substract-internal-left{
+    border-bottom-width: 2px;
+    border-color: rgba(255,255,255,0.3);
+}
+
+.substract-internal-right{
+    border-top-width: 2px;
+    border-color: rgba(0,0,0,0.3);
+}
+
+.substract-external-left{
+    border-bottom-width: 2px;
+    border-color: rgba(0,0,0,0.3);
+} 
+ 
+.substract-external-right{
+    border-top-width: 2px;
+    border-color: rgba(255,255,255,0.3);
+}
+ 
+.image-33-3{
+    position: absolute;
+    left: 80px;
+}
+
+.main-label{
+    position: absolute;
+    top: 215px;
+}
+
+.heads-image{
+    position: absolute;
+    top: -135px;
+    height: 470px; 
+    transform: rotate(6.42deg);
+}
+
+.menu-items-container{
+    position: absolute;
+    top: 360px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item{
+    color: white;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+
+    font-size: 19px;
+    padding: 8px;
+
+    cursor: pointer;
+}
+
+.menu-item:hover{
+    color: black; 
+}
+
+.anonses-recommended{
+    position: absolute;
+    top: 300px;
+    right: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.rounded-notify{
+    color: white;
+    text-align: center;
+
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+
+    width: 160px;
+    height: 28px;
+
+    border: 1px solid white;
+    border-radius: 20px;
+    border-bottom-width: 3px;
+    border-right-width: 3px;
+
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.rounded-notify:hover{
+    text-decoration: underline;
+}
+
+.rounded-notify > img{
+    margin-right: 5px;
+}
+
+.to-bottom-container{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 440px;
+
+    cursor: pointer;
+}
+
+.to-bottom-container:hover *{
+    border-width: 2px;
+}
+
+.to-bottom{
+    height: 20px;
+    width: 20px;
+
+    transform: rotate(45deg);
+
+    border: 1px solid white;
+    border-top: 0;
+    border-left: 0;
+
+    margin-bottom: -12px;
+}
+ 
+.prickly-thing{
+    position: absolute;
+
+    top: -650px;
+    right: -150px;
+
+    height: 1200px;
+
+    animation: 6s move-move infinite linear;
+}

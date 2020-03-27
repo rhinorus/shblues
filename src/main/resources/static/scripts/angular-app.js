@@ -1,0 +1,1 @@
+angular.module('shblues', ['ngMaterial', 'ngMessages', 'ngAnimate']);
