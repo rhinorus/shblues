@@ -12,6 +12,9 @@
 
 </head> 
 <body ng-app="shblues" ng-controller="mainController">
+    <!-- jQuery -->
+    <script src="/scripts/jquery-3.4.1.min.js"></script>
+
     <!-- Angular Material requires Angular.js Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
@@ -30,7 +33,47 @@
     <link href="http://allfont.ru/allfont.css?fonts=b52" rel="stylesheet" type="text/css" />
     <!-- Ubuntu font -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
-     
+    
+    <div class="top-menu" ng-show="showMenu && !showBigMenu" ng-click="toggleShowBigMenu()">
+        <img class="menu-arrow" src="/assets/menu-arrow.png" alt="menu arrow">
+    </div>
+
+    <div class="big-top-menu" ng-show="showBigMenu"> 
+        <div class="top-disco-container">
+            <div class="substract substract-internal substract-internal-left"></div>
+            <div class="substract substract-internal substract-internal-right"></div>
+
+            <div class="substract substract-external substract-external-left"></div>
+            <div class="substract substract-external substract-external-right"></div>
+
+            <div class="white-circle" ng-click="toggleShowBigMenu()">
+                <img src="/assets/menu-arrow.png" alt="menu arrow">
+            </div>
+
+            <img class="top-main-label" src="/assets/top-sh-blues-label.png" alt="Ша-Блюз"> 
+
+            <div class="menu-items-container">
+                <div class="menu-item" ng-repeat="item in menu" ng-click="scrollToAnchor(item.anchorId,true)">
+                    {{item.name}} ({{item.count}}) 
+                </div>
+            </div>
+
+            <div class="anonses-recommended">
+                <div class="rounded-notify">
+                    <img src="/assets/alert.png" alt="alert">
+                    <div>Анонсы</div>
+                </div>
+                <div class="rounded-notify">
+                    <img src="/assets/like.png" alt="alert">
+                    <div>Рекомендации</div> 
+                </div>
+            </div>
+
+        </div>
+        <div class="top-disco-trimmer"></div>
+
+    </div>
+
     <div class="menu-block">
         <div class="disco-container">
             <img class="disco-img" src="/assets/disco.png" alt="Disco-Dingo Boogy-Woogy!">
@@ -71,14 +114,25 @@
 
         </div>
 
-        <div class="to-bottom-container">
+        <div class="to-bottom-container" ng-click="scrollToAnchor('#videos')">
             <div class="to-bottom"></div>
             <div class="to-bottom"></div>
         </div>
         
         <img class="prickly-thing" src="/assets/qw.png" alt="Штука с иголкой для пластинок">
+    </div> 
+
+    <div id="videos" class="video-block">
+        <div class="video-header">
+            <img class="video-background" src="/assets/video-background.png" alt="Тут, короче, ленточка такая, как пленка, на которой раньше фильмы были.">
+            <div>
+                <h2>Видео</h2>
+            </div>
+        </div>
+
+
 
     </div>
-
+ 
 </body>
 </html>
