@@ -209,6 +209,11 @@ h1{
     top: -266px;
 }
 
+.big-top-menu.ng-hide-add .menu-item:hover,
+.big-top-menu.ng-hide-remove .menu-item:hover{
+    color: white;
+}
+
 .big-top-menu.ng-hide {
     -webkit-transition : 0.7s ease-in-out top;
     -moz-transition    : 0.7s ease-in-out top;
@@ -470,6 +475,12 @@ h1{
     border-left: 0;
 
     margin-bottom: -12px;
+}
+
+.prickly-thing-wrapper{
+    min-width: 1600px; 
+    position: absolute;
+    top: 0;
 }
  
 .prickly-thing{
