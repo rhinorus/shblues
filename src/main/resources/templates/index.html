@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ша-Блюз</title>
 
+    <!-- Bootstrap4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <link rel="stylesheet" href="/styles/style.css">
 
     <!-- Angular Material style sheet -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
 
 </head> 
-<body ng-app="shblues" ng-controller="mainController">
+<body ng-app="shblues" ng-controller="mainController" ng-cloak>
     <!-- jQuery -->
     <script src="/scripts/jquery-3.4.1.min.js"></script>
 
@@ -136,7 +139,35 @@
             </div>
         </div>
 
+        <div class="video-content-wrapper">
+            <div class="video-images-container">
+                <img class="big-babina" src="/assets/babina.png" alt="Бабина">
+                <img class="left-video-lent" src="/assets/long-lent.png" alt="Видеолента">
+                <img class="video-photos" src="/assets/photos.png" alt="Фотографии">
+            </div>
 
+            <div class="video-content">
+
+                <div class="row">
+                    <div class="col-3 video-content-row" ng-repeat="video in videos"> 
+                        <div class="tooltipable video-item" data-tooltip="{{'video-' + $index}}">
+                            <div class="video-item-image-wrapper">
+                                <img src="{{video.src}}" alt="Mom, I'm in TV!">
+                            </div>
+                            <div class="user-tooltip" id="{{'video-' + $index}}">{{video.name}}</div>
+                        </div> 
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div class="video-images-container">
+                <img class="small-babina" src="/assets/babina.png" alt="Бабина">
+                <img class="right-video-lent" src="/assets/long-lent.png" alt="Видеолента">
+                <img class="camera" src="/assets/camera.png" alt="Камера">
+            </div>
+        </div>
 
     </div>
  
