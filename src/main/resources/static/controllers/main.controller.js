@@ -4,6 +4,7 @@ angular
  
         $scope.showMenu = false
         $scope.showBigMenu = false;
+        $scope.activeTrack = null; 
 
         $scope.videos = [
             {
@@ -72,7 +73,90 @@ angular
             },
 
         ]; 
-
+ 
+        $scope.tracks = [
+            {
+                name: 'Молодца и сопли красят',
+                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
+                file: '/assets/tracks/01.wav'
+            },
+            {
+                name: 'Молодца и сопли красят',
+                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
+                file: '/assets/tracks/01.wav'
+            },
+            {
+                name: 'Молодца и сопли красят',
+                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
+                file: '/assets/tracks/01.wav'
+            },
+            {
+                name: 'Молодца и сопли красят',
+                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
+                file: '/assets/tracks/01.wav'
+            }, //4
+            {
+                name: 'Молодца и сопли красят',
+                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
+                file: '/assets/tracks/01.wav'
+            },
+            {
+                name: 'Молодца и сопли красят',
+                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
+                file: '/assets/tracks/01.wav'
+            },
+            {
+                name: 'Молодца и сопли красят',
+                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
+                file: '/assets/tracks/01.wav'
+            },
+            {
+                name: 'Молодца и сопли красят',
+                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
+                file: '/assets/tracks/01.wav'
+            }, //8
+            {
+                name: 'Молодца и сопли красят',
+                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
+                file: '/assets/tracks/01.wav'
+            },
+            {
+                name: 'Молодца и сопли красят',
+                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
+                file: '/assets/tracks/01.wav'
+            },
+            {
+                name: 'Молодца и сопли красят',
+                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
+                file: '/assets/tracks/01.wav'
+            },
+            {
+                name: 'Молодца и сопли красят',
+                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
+                file: '/assets/tracks/01.wav'
+            }, //12
+            {
+                name: 'Молодца и сопли красят',
+                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
+                file: '/assets/tracks/01.wav'
+            },
+            {
+                name: 'Молодца и сопли красят',
+                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
+                file: '/assets/tracks/01.wav'
+            },
+            {
+                name: 'Молодца и сопли красят',
+                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
+                file: '/assets/tracks/01.wav'
+            },
+            {
+                name: 'Молодца и сопли красят',
+                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
+                file: '/assets/tracks/01.wav'
+            }
+        ];
+ 
         $scope.menu = [
             {
                 name: 'Видео',
@@ -81,7 +165,7 @@ angular
             },
             {
                 name: 'Ша-Блюз треки',
-                count: 7,
+                count: $scope.tracks.length,
                 anchorId: '#tracks'
             },
             {
@@ -140,4 +224,20 @@ angular
                 $scope.showBigMenu = !$scope.showBigMenu;
             }, 0);
         };
+
+        $scope.setActive = function(track){
+
+            if($scope.activeTrack != track){
+                track.active = true;
+
+                if($scope.activeTrack != null)
+                    $scope.activeTrack.active = false;
+                $scope.activeTrack = track;
+            }
+            else{
+                track.active = false;
+                $scope.activeTrack = null;
+            }  
+        };
+
     });

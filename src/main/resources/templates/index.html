@@ -175,22 +175,48 @@
         <div class="tracks-header">
             <img class="tracks-label" src="/assets/tracks-label.png" alt="Ша-Блюз треки">
         </div>
-        <div class="tracks-content">
-            <div class="row">
-                <div class="col-6">
-                    <div class="audio-item">
-                        <div class="audio-item-content">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="audio-item">
-                        <div class="audio-item-content">
+        <div class="tracks-content-wrapper">
+
+            <div class="tracks-images-container">
+                <img class="donkey-image"       src="/assets/donkey.png"            alt="Ослик">
+                <img class="left-first-note"    src="/assets/double-top-note.png"   alt="Первая нота">
+                <img class="left-second-note"   src="/assets/one-top-note.png"      alt="Вторая нота">
+                <img class="left-third-note"    src="/assets/left-third-note.png"   alt="Третья нота">
+                <img class="left-fourth-note"   src="/assets/left-fourth-note.png"  alt="Четвертая нота">
+                <img class="left-fif-note"      src="/assets/left-fif-note.png"     alt="Пятая нота">
+                <img class="left-sixth-note"    src="/assets/left-sixth-note.png"   alt="Шестая нота">
+            </div>
+
+            <div class="tracks-content">
+                <div class="row">
+                    <div class="col-6" ng-repeat="track in tracks" style="margin-bottom: 20px;">
+                        <div class="audio-item" ng-class="track.active ? 'audio-item-active' : ''" ng-click="setActive(track)">
+                            <div class="audio-item-content">
+                                <span class="audio-item-header">{{track.name}}</span>
+                                <span class="audio-item-description">{{track.description}}</span>
+                            </div>
+                            <div class="audio-item-play"></div>
+                            <div class="audio-item-pause">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="tracks-images-container">
+                <img class="right-first-note"    src="/assets/left-sixth-note.png"   alt="Первая нота">
+                <img class="right-second-note"   src="/assets/left-fourth-note.png"  alt="Вторая нота">
+                <img class="right-third-note"    src="/assets/left-fif-note.png"     alt="Третья нота">
+                <img class="right-fourth-note"   src="/assets/one-top-note.png"      alt="Четвертая нота">
+                <img class="right-fif-note"      src="/assets/left-third-note.png"   alt="Пятая нота">
+                <img class="right-sixth-note"    src="/assets/left-third-note.png"   alt="Шестая нота">
+                <img class="right-seventh-note"  src="/assets/one-top-note.png"      alt="Седьмая нота">
+                <img class="right-eighth-note"   src="/assets/double-top-note.png"   alt="Восьмая нота">
+                <img class="croco-image"         src="/assets/gena.png"              alt="Крокодил">
+            </div>
+
         </div>
+        
     </div>
  
 </body> 
