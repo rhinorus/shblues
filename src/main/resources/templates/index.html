@@ -218,6 +218,76 @@
         </div>
         
     </div>
+
+    <div id="mashups" class="mashups">
+        <div class="mashups-header">
+            <img class="mashups-label" src="/assets/mashups-label.png" alt="Мэшапы">
+        </div>
+
+        <div class="mashups-content">
+            <div class="mashups-top">
+                <div class="mashups-top-left-container">
+                    <div class="mashups-top-row">
+                        <div class="mashups-item" 
+                        ng-repeat="mashup in mashups" 
+                        ng-if="isMashupAllowed($index, 'top-first-row')" 
+                        ng-click="setActive(mashup)"
+                        ng-class="mashup.active ? 'active' : ''">
+                            <div class="mashups-item-image-wrapper">
+                                <img src="{{mashup.img}}" alt="tsoi">
+                            </div>
+                            <span class="mashups-description">{{mashup.name}}</span>
+                            <span class="mashups-date">{{mashup.date}}</span> 
+                        </div>
+                    </div>
+                    <div class="mashups-top-row">
+                        <div class="mashups-item" 
+                        ng-repeat="mashup in mashups" 
+                        ng-if="isMashupAllowed($index, 'top-second-row')" 
+                        ng-click="setActive(mashup)"
+                        ng-class="mashup.active ? 'active' : ''">
+                            <div class="mashups-item-image-wrapper">
+                                <img src="{{mashup.img}}" alt="tsoi">
+                            </div>
+                            <span class="mashups-description">{{mashup.name}}</span>
+                            <span class="mashups-date">{{mashup.date}}</span> 
+                        </div>
+                    </div>
+                </div>
+                
+                <img class="surfer" src="/assets/surfer.png" alt="Surfer">
+            </div>
+
+            <div class="mashups-center">
+                <div class="mashups-item" 
+                ng-repeat="mashup in mashups" 
+                ng-if="isMashupAllowed($index, 'center')" 
+                ng-click="setActive(mashup)"
+                ng-class="mashup.active ? 'active' : ''">
+                    <div class="mashups-item-image-wrapper">
+                        <img src="{{mashup.img}}" alt="tsoi">
+                    </div>
+                    <span class="mashups-description">{{mashup.name}}</span>
+                    <span class="mashups-date">{{mashup.date}}</span> 
+                </div>
+            </div> 
+            
+            <div class="mashups-bottom">
+                <img class="disk-eater" src="/assets/disk-eater.png" alt="Поедатель дисков">
+                <div class="mashups-item" 
+                ng-repeat="mashup in mashups" 
+                ng-if="isMashupAllowed($index, 'bottom')" 
+                ng-click="setActive(mashup)"
+                ng-class="mashup.active ? 'active' : ''">
+                    <div class="mashups-item-image-wrapper">
+                        <img src="{{mashup.img}}" alt="tsoi">
+                    </div>
+                    <span class="mashups-description">{{mashup.name}}</span>
+                    <span class="mashups-date">{{mashup.date}}</span> 
+                </div>
+            </div>
+        </div>
+    </div>
  
 </body> 
 </html>

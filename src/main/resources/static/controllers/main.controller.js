@@ -156,6 +156,70 @@ angular
                 file: '/assets/tracks/01.wav'
             }
         ];
+
+        $scope.mashups = [
+            {
+                name: 'Очень очень очень длинное название',
+                img: '/assets/tsoi.png',
+                date: '01.01.1900',
+                file: '/assets/tracks/01.wav'
+            },
+            {
+                name: 'Очень очень очень длинное название',
+                img: '/assets/tsoi.png',
+                date: '01.01.1900',
+                file: '/assets/tracks/01.wav'
+            },
+            {
+                name: 'Очень очень очень длинное название',
+                img: '/assets/tsoi.png',
+                date: '01.01.1900',
+                file: '/assets/tracks/01.wav'
+            },
+            {
+                name: 'Очень очень очень длинное название',
+                img: '/assets/tsoi.png',
+                date: '01.01.1900',
+                file: '/assets/tracks/01.wav'
+            }, //4
+            {
+                name: 'Очень очень очень длинное название',
+                img: '/assets/tsoi.png',
+                date: '01.01.1900',
+                file: '/assets/tracks/01.wav'
+            },
+            {
+                name: 'Очень очень очень длинное название',
+                img: '/assets/tsoi.png',
+                date: '01.01.1900',
+                file: '/assets/tracks/01.wav'
+            },
+            {
+                name: 'Очень очень очень длинное название',
+                img: '/assets/tsoi.png',
+                date: '01.01.1900',
+                file: '/assets/tracks/01.wav'
+            },
+            {
+                name: 'Очень очень очень длинное название',
+                img: '/assets/tsoi.png',
+                date: '01.01.1900',
+                file: '/assets/tracks/01.wav'
+            }, //8
+            {
+                name: 'Очень очень очень длинное название',
+                img: '/assets/tsoi.png',
+                date: '01.01.1900',
+                file: '/assets/tracks/01.wav'
+            },
+            {
+                name: 'Очень очень очень длинное название',
+                img: '/assets/tsoi.png',
+                date: '01.01.1900',
+                file: '/assets/tracks/01.wav'
+            },
+
+        ];
  
         $scope.menu = [
             {
@@ -170,7 +234,7 @@ angular
             },
             {
                 name: 'Мэшапы',
-                count: 4,
+                count: $scope.mashups.length,
                 anchorId: '#mashups'
             },
             {
@@ -239,5 +303,30 @@ angular
                 $scope.activeTrack = null;
             }  
         };
+ 
+        $scope.isMashupAllowed = function(index, location){
+            switch(location){
+                case 'top-first-row':
+                    if(index < 2)
+                        return true;
+                    break;
+                case 'top-second-row':
+                    if(index > 1 && index < 4)
+                        return true;
+                    break;
+                case 'center':
+                    if(index > 3 && index < 8)
+                        return true;
+                    break;
+                case 'bottom':
+                    if(index > 7 && index < 10)
+                        return true;
+                    break;
+                default:
+                    break;
+            }
+
+            return false;
+        }
 
     });

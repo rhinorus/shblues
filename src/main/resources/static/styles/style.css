@@ -1004,3 +1004,159 @@ h1{
 
     height: 425px;
 }
+
+.mashups{
+    height: 1250px;
+
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+
+    background-color: #E1CCB9;
+ 
+    border: 0 solid black;
+    border-bottom: 10px;
+
+    padding-top: 80px;;
+}
+
+.mashups-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: 2px solid black;
+    padding-bottom: 40px;
+
+    width: 720px;
+}
+
+.mashups-label{
+    height: 40px;
+}
+
+.mashups-content{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 0 5px;
+    padding-top: 50px;
+}
+
+.mashups-top{
+    display: flex;
+    height: 470px;
+    width: 710px;
+}
+
+.mashups-center{
+    height: 225px;
+    margin: 10px 0; 
+
+    display: flex;
+    justify-content: space-around;
+} 
+
+.mashups-bottom{
+    height: 225px;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.mashups-item{
+    height: 225px;
+    width: 170px;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 2px solid black;
+    box-shadow: 4px 4px 1px 0px;
+
+    cursor: pointer;
+}
+
+.mashups-item.active{
+    background-color: lightblue;
+}
+
+.mashups-description{
+    margin: 10px 10px 5px 10px;
+
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.mashups-date{
+    margin-left: 10px;
+
+    color: #898989;
+    font-size: 12px;
+}
+
+.mashups-item img{
+    height: 145px;
+    width: 145px;
+
+    padding: 10px;
+}
+
+.mashups-item-image-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.mashups-top-left-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mashups-top-left-container .mashups-top-row:first-of-type{
+    margin-bottom: 10px;
+}
+
+.mashups-top-row{
+    display: flex;
+}
+
+.mashups-top-row .mashups-item:last-of-type{
+    margin: 0px 10px;
+}
+
+.surfer{
+    height: 460px;
+    width: 350px;
+
+    border: 2px solid black;
+    box-sizing: border-box;
+
+    box-shadow: 4px 4px 1px 0px;
+}
+
+.mashups-center .mashups-item{
+    margin-right: 10px;
+}
+
+.mashups-center .mashups-item:last-of-type{
+    margin-right: 0;
+}
+
+.mashups-bottom .mashups-item:first-of-type{
+    margin: 0 10px;
+}
+
+.disk-eater{
+    height: 225px;
+    width: 350px; 
+
+    border: 2px solid black;
+    box-sizing: border-box;
+
+    box-shadow: 4px 4px 1px 0px;
+}
