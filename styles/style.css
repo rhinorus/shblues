@@ -1,11 +1,11 @@
 @font-face {
     font-family: klinik; 
-    src: url(/fonts/klinik.ttf); 
+    src: url(../data/assets/fonts/klinik.ttf); 
 }
 
 @font-face {
     font-family: izvestija; 
-    src: url(/fonts/izvestija.ttf); 
+    src: url(../data/assets/fonts/izvestija.ttf); 
 }
 
 html{

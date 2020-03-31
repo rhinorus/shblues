@@ -73,152 +73,151 @@ angular
             },
 
         ]; 
- 
+  
         $scope.tracks = [
             {
                 name: 'Молодца и сопли красят',
                 description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: '/assets/tracks/01.wav'
+                file: 'data/assets/tracks/01.wav'
             },
             {
                 name: 'Молодца и сопли красят',
                 description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: '/assets/tracks/01.wav'
+                file: 'data/assets/tracks/01.wav'
             },
             {
                 name: 'Молодца и сопли красят',
                 description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: '/assets/tracks/01.wav'
+                file: 'data/assets/tracks/01.wav'
             },
             {
                 name: 'Молодца и сопли красят',
                 description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: '/assets/tracks/01.wav'
+                file: 'data/assets/tracks/01.wav'
             }, //4
             {
                 name: 'Молодца и сопли красят',
                 description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: '/assets/tracks/01.wav'
+                file: 'data/assets/tracks/01.wav'
             },
             {
                 name: 'Молодца и сопли красят',
                 description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: '/assets/tracks/01.wav'
+                file: 'data/assets/tracks/01.wav'
             },
             {
                 name: 'Молодца и сопли красят',
                 description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: '/assets/tracks/01.wav'
+                file: 'data/assets/tracks/01.wav'
             },
             {
                 name: 'Молодца и сопли красят',
                 description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: '/assets/tracks/01.wav'
+                file: 'data/assets/tracks/01.wav'
             }, //8
             {
                 name: 'Молодца и сопли красят',
                 description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: '/assets/tracks/01.wav'
+                file: 'data/assets/tracks/01.wav'
             },
             {
                 name: 'Молодца и сопли красят',
                 description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: '/assets/tracks/01.wav'
+                file: 'data/assets/tracks/01.wav'
             },
             {
                 name: 'Молодца и сопли красят',
                 description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: '/assets/tracks/01.wav'
+                file: 'data/assets/tracks/01.wav'
             },
             {
                 name: 'Молодца и сопли красят',
                 description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: '/assets/tracks/01.wav'
+                file: 'data/assets/tracks/01.wav'
             }, //12
             {
                 name: 'Молодца и сопли красят',
                 description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: '/assets/tracks/01.wav'
+                file: 'data/assets/tracks/01.wav'
             },
             {
                 name: 'Молодца и сопли красят',
                 description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: '/assets/tracks/01.wav'
+                file: 'data/assets/tracks/01.wav'
             },
             {
                 name: 'Молодца и сопли красят',
                 description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: '/assets/tracks/01.wav'
+                file: 'data/assets/tracks/01.wav'
             },
             {
                 name: 'Молодца и сопли красят',
                 description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: '/assets/tracks/01.wav'
+                file: 'data/assets/tracks/01.wav'
             }
         ];
 
         $scope.mashups = [
             {
                 name: 'Очень очень очень длинное название',
-                img: '/assets/tsoi.png',
+                img: 'data/assets/images/tsoi.png',
                 date: '01.01.1900',
                 file: '/assets/tracks/01.wav'
             },
             {
                 name: 'Очень очень очень длинное название',
-                img: '/assets/tsoi.png',
+                img: 'data/assets/images/tsoi.png',
                 date: '01.01.1900',
                 file: '/assets/tracks/01.wav'
             },
             {
                 name: 'Очень очень очень длинное название',
-                img: '/assets/tsoi.png',
+                img: 'data/assets/images/tsoi.png',
                 date: '01.01.1900',
                 file: '/assets/tracks/01.wav'
             },
             {
                 name: 'Очень очень очень длинное название',
-                img: '/assets/tsoi.png',
+                img: 'data/assets/images/tsoi.png',
                 date: '01.01.1900',
                 file: '/assets/tracks/01.wav'
             }, //4
             {
                 name: 'Очень очень очень длинное название',
-                img: '/assets/tsoi.png',
+                img: 'data/assets/images/tsoi.png',
                 date: '01.01.1900',
                 file: '/assets/tracks/01.wav'
             },
             {
                 name: 'Очень очень очень длинное название',
-                img: '/assets/tsoi.png',
+                img: 'data/assets/images/tsoi.png',
                 date: '01.01.1900',
                 file: '/assets/tracks/01.wav'
             },
             {
                 name: 'Очень очень очень длинное название',
-                img: '/assets/tsoi.png',
+                img: 'data/assets/images/tsoi.png',
                 date: '01.01.1900',
                 file: '/assets/tracks/01.wav'
             },
             {
                 name: 'Очень очень очень длинное название',
-                img: '/assets/tsoi.png',
+                img: 'data/assets/images/tsoi.png',
                 date: '01.01.1900',
                 file: '/assets/tracks/01.wav'
             }, //8
             {
                 name: 'Очень очень очень длинное название',
-                img: '/assets/tsoi.png',
+                img: 'data/assets/images/tsoi.png',
                 date: '01.01.1900',
                 file: '/assets/tracks/01.wav'
             },
             {
                 name: 'Очень очень очень длинное название',
-                img: '/assets/tsoi.png',
+                img: 'data/assets/images/tsoi.png',
                 date: '01.01.1900',
                 file: '/assets/tracks/01.wav'
-            },
-
+            }
         ];
  
         $scope.menu = [

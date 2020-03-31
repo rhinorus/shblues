@@ -8,15 +8,15 @@
     <!-- Bootstrap4 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
 
     <!-- Angular Material style sheet -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
 
-</head> 
+</head>  
 <body ng-app="shblues" ng-controller="mainController" ng-cloak>
     <!-- jQuery -->
-    <script src="/scripts/jquery-3.4.1.min.js"></script>
+    <script src="data/scripts/jquery-3.4.1.min.js"></script>
 
     <!-- Angular Material requires Angular.js Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
@@ -27,10 +27,10 @@
     <!-- Angular Material Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script>
      <!-- Angular app file -->
-    <script src="/scripts/angular-app.js"></script>
+    <script src="data/scripts/angular-app.js"></script>
 
     <!-- Controller file -->
-    <script src="/controllers/main.controller.js"></script>
+    <script src="controllers/main.controller.js"></script>
 
     <!-- B-52 font -->
     <link href="http://allfont.ru/allfont.css?fonts=b52" rel="stylesheet" type="text/css" />
@@ -38,7 +38,7 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     
     <div class="top-menu" ng-show="showMenu && !showBigMenu" ng-click="toggleShowBigMenu()">
-        <img class="menu-arrow" src="/assets/menu-arrow.png" alt="menu arrow">
+        <img class="menu-arrow" src="data/assets/images/menu-arrow.png" alt="menu arrow">
     </div>
 
     <div class="big-top-menu" ng-show="showBigMenu"> 
@@ -50,10 +50,10 @@
             <div class="substract substract-external substract-external-right"></div>
 
             <div class="white-circle" ng-click="toggleShowBigMenu()">
-                <img src="/assets/menu-arrow.png" alt="menu arrow">
+                <img src="data/assets/images/menu-arrow.png" alt="menu arrow">
             </div>
 
-            <img class="top-main-label" src="/assets/top-sh-blues-label.png" alt="Ша-Блюз"> 
+            <img class="top-main-label" src="data/assets/images/top-sh-blues-label.png" alt="Ша-Блюз"> 
 
             <div class="menu-items-container">
                 <div class="menu-item" ng-repeat="item in menu" ng-click="scrollToAnchor(item.anchorId,true)">
@@ -63,11 +63,11 @@
 
             <div class="anonses-recommended">
                 <div class="rounded-notify">
-                    <img src="/assets/alert.png" alt="alert">
+                    <img src="data/assets/images/alert.png" alt="alert">
                     <div>Анонсы</div>
                 </div>
                 <div class="rounded-notify">
-                    <img src="/assets/like.png" alt="alert">
+                    <img src="data/assets/images/like.png" alt="alert">
                     <div>Рекомендации</div> 
                 </div>
             </div>
@@ -79,7 +79,7 @@
 
     <div class="menu-block">
         <div class="disco-container">
-            <img class="disco-img" src="/assets/disco.png" alt="Disco-Dingo Boogy-Woogy!">
+            <img class="disco-img" src="data/assets/images/disco.png" alt="Disco-Dingo Boogy-Woogy!">
         </div>
  
         <div class="menu-circle">
@@ -93,10 +93,10 @@
             <div class="substract substract-external substract-external-left"></div>
             <div class="substract substract-external substract-external-right"></div>
 
-            <img class="image-33-3" src="/assets/33,3.png" alt="33,3"> 
+            <img class="image-33-3" src="data/assets/images/33,3.png" alt="33,3"> 
 
-            <img class="main-label" src="/assets/sh-blues-label.png" alt="Ша-Блюз"> 
-            <img class="heads-image" src="/assets/heads.png" alt="Two beauty heads :)"> 
+            <img class="main-label" src="data/assets/images/sh-blues-label.png" alt="Ша-Блюз"> 
+            <img class="heads-image" src="data/assets/images/heads.png" alt="Two beauty heads :)"> 
 
             <div class="menu-items-container">
                 <div class="menu-item" ng-repeat="item in menu" ng-click="scrollToAnchor(item.anchorId)">
@@ -106,11 +106,11 @@
 
             <div class="anonses-recommended">
                 <div class="rounded-notify">
-                    <img src="/assets/alert.png" alt="alert">
+                    <img src="data/assets/images/alert.png" alt="alert">
                     <div>Анонсы</div>
                 </div>
                 <div class="rounded-notify">
-                    <img src="/assets/like.png" alt="alert">
+                    <img src="data/assets/images/like.png" alt="alert">
                     <div>Рекомендации</div> 
                 </div>
             </div>
@@ -124,7 +124,7 @@
         
         <div class="prickly-thing-wrapper">
             <div style="position: relative;">
-                <img class="prickly-thing" src="/assets/qw.png" alt="Штука с иголкой для пластинок">
+                <img class="prickly-thing" src="data/assets/images/qw.png" alt="Штука с иголкой для пластинок">
             </div>
             
         </div>
@@ -133,7 +133,7 @@
 
     <div id="videos" class="video-block">
         <div class="video-header">
-            <img class="video-background" src="/assets/video-background.png" alt="Тут, короче, ленточка такая, как пленка, на которой раньше фильмы были.">
+            <img class="video-background" src="data/assets/images/video-background.png" alt="Тут, короче, ленточка такая, как пленка, на которой раньше фильмы были.">
             <div>
                 <h2>Видео</h2>
             </div>
@@ -141,9 +141,9 @@
 
         <div class="video-content-wrapper">
             <div class="video-images-container">
-                <img class="big-babina" src="/assets/babina.png" alt="Бабина">
-                <img class="left-video-lent" src="/assets/long-lent.png" alt="Видеолента">
-                <img class="video-photos" src="/assets/photos.png" alt="Фотографии">
+                <img class="big-babina" src="data/assets/images/babina.png" alt="Бабина">
+                <img class="left-video-lent" src="data/assets/images/long-lent.png" alt="Видеолента">
+                <img class="video-photos" src="data/assets/images/photos.png" alt="Фотографии">
             </div>
 
             <div class="video-content">
@@ -163,9 +163,9 @@
             </div>
 
             <div class="video-images-container">
-                <img class="small-babina" src="/assets/babina.png" alt="Бабина">
-                <img class="right-video-lent" src="/assets/long-lent.png" alt="Видеолента">
-                <img class="camera" src="/assets/camera.png" alt="Камера">
+                <img class="small-babina" src="data/assets/images/babina.png" alt="Бабина">
+                <img class="right-video-lent" src="data/assets/images/long-lent.png" alt="Видеолента">
+                <img class="camera" src="data/assets/images/camera.png" alt="Камера">
             </div>
         </div>
 
@@ -173,18 +173,18 @@
 
     <div id="tracks" class="tracks">
         <div class="tracks-header">
-            <img class="tracks-label" src="/assets/tracks-label.png" alt="Ша-Блюз треки">
+            <img class="tracks-label" src="data/assets/images/tracks-label.png" alt="Ша-Блюз треки">
         </div>
         <div class="tracks-content-wrapper">
 
             <div class="tracks-images-container">
-                <img class="donkey-image"       src="/assets/donkey.png"            alt="Ослик">
-                <img class="left-first-note"    src="/assets/double-top-note.png"   alt="Первая нота">
-                <img class="left-second-note"   src="/assets/one-top-note.png"      alt="Вторая нота">
-                <img class="left-third-note"    src="/assets/left-third-note.png"   alt="Третья нота">
-                <img class="left-fourth-note"   src="/assets/left-fourth-note.png"  alt="Четвертая нота">
-                <img class="left-fif-note"      src="/assets/left-fif-note.png"     alt="Пятая нота">
-                <img class="left-sixth-note"    src="/assets/left-sixth-note.png"   alt="Шестая нота">
+                <img class="donkey-image"       src="data/assets/images/donkey.png"            alt="Ослик">
+                <img class="left-first-note"    src="data/assets/images/double-top-note.png"   alt="Первая нота">
+                <img class="left-second-note"   src="data/assets/images/one-top-note.png"      alt="Вторая нота">
+                <img class="left-third-note"    src="data/assets/images/left-third-note.png"   alt="Третья нота">
+                <img class="left-fourth-note"   src="data/assets/images/left-fourth-note.png"  alt="Четвертая нота">
+                <img class="left-fif-note"      src="data/assets/images/left-fif-note.png"     alt="Пятая нота">
+                <img class="left-sixth-note"    src="data/assets/images/left-sixth-note.png"   alt="Шестая нота">
             </div>
 
             <div class="tracks-content">
@@ -204,15 +204,15 @@
             </div>
 
             <div class="tracks-images-container">
-                <img class="right-first-note"    src="/assets/left-sixth-note.png"   alt="Первая нота">
-                <img class="right-second-note"   src="/assets/left-fourth-note.png"  alt="Вторая нота">
-                <img class="right-third-note"    src="/assets/left-fif-note.png"     alt="Третья нота">
-                <img class="right-fourth-note"   src="/assets/one-top-note.png"      alt="Четвертая нота">
-                <img class="right-fif-note"      src="/assets/left-third-note.png"   alt="Пятая нота">
-                <img class="right-sixth-note"    src="/assets/left-third-note.png"   alt="Шестая нота">
-                <img class="right-seventh-note"  src="/assets/one-top-note.png"      alt="Седьмая нота">
-                <img class="right-eighth-note"   src="/assets/double-top-note.png"   alt="Восьмая нота">
-                <img class="croco-image"         src="/assets/gena.png"              alt="Крокодил">
+                <img class="right-first-note"    src="data/assets/images/left-sixth-note.png"   alt="Первая нота">
+                <img class="right-second-note"   src="data/assets/images/left-fourth-note.png"  alt="Вторая нота">
+                <img class="right-third-note"    src="data/assets/images/left-fif-note.png"     alt="Третья нота">
+                <img class="right-fourth-note"   src="data/assets/images/one-top-note.png"      alt="Четвертая нота">
+                <img class="right-fif-note"      src="data/assets/images/left-third-note.png"   alt="Пятая нота">
+                <img class="right-sixth-note"    src="data/assets/images/left-third-note.png"   alt="Шестая нота">
+                <img class="right-seventh-note"  src="data/assets/images/one-top-note.png"      alt="Седьмая нота">
+                <img class="right-eighth-note"   src="data/assets/images/double-top-note.png"   alt="Восьмая нота">
+                <img class="croco-image"         src="data/assets/images/gena.png"              alt="Крокодил">
             </div>
 
         </div>
@@ -221,7 +221,7 @@
 
     <div id="mashups" class="mashups">
         <div class="mashups-header">
-            <img class="mashups-label" src="/assets/mashups-label.png" alt="Мэшапы">
+            <img class="mashups-label" src="data/assets/images/mashups-label.png" alt="Мэшапы">
         </div>
 
         <div class="mashups-content">
@@ -255,7 +255,7 @@
                     </div>
                 </div>
                 
-                <img class="surfer" src="/assets/surfer.png" alt="Surfer">
+                <img class="surfer" src="data/assets/images/surfer.png" alt="Surfer">
             </div>
 
             <div class="mashups-center">
@@ -273,7 +273,7 @@
             </div> 
             
             <div class="mashups-bottom">
-                <img class="disk-eater" src="/assets/disk-eater.png" alt="Поедатель дисков">
+                <img class="disk-eater" src="data/assets/images/disk-eater.png" alt="Поедатель дисков">
                 <div class="mashups-item" 
                 ng-repeat="mashup in mashups" 
                 ng-if="isMashupAllowed($index, 'bottom')" 
@@ -290,42 +290,42 @@
     </div>
 
     <div id="melodclamations" class="melodclamations">
-        <img class="melodclamations-label" src="/assets/melodeclamations-label.png" alt="Мелодекламации">
+        <img class="melodclamations-label" src="data/assets/images/melodeclamations-label.png" alt="Мелодекламации">
 
         <div class="melodclamations-content">
             <div class="melodclamations-row active">
                 <div class="parallelogram"></div> 
                 <div class="melodclamations-name">Roomservice</div>
                 <div class="melodclamations-arrows-wrapper">
-                    <img class="arrows" src="/assets/arrows.png" alt="Стрелки">
+                    <img class="arrows" src="data/assets/images/arrows.png" alt="Стрелки">
                 </div>
             </div>
             <div class="melodclamations-row">
                 <div class="parallelogram"></div> 
                 <div class="melodclamations-name">Summertime</div>
                 <div class="melodclamations-arrows-wrapper">
-                    <img class="arrows" src="/assets/arrows.png" alt="Стрелки">
+                    <img class="arrows" src="data/assets/images/arrows.png" alt="Стрелки">
                 </div>
             </div>
             <div class="melodclamations-row">
                 <div class="parallelogram"></div> 
                 <div class="melodclamations-name">Sunny</div>  
                 <div class="melodclamations-arrows-wrapper">
-                    <img class="arrows" src="/assets/arrows.png" alt="Стрелки">
+                    <img class="arrows" src="data/assets/images/arrows.png" alt="Стрелки">
                 </div>
             </div>
         </div>
 
-        <img class="md-notes-left" src="/assets/md-notes-left.png" alt="Ноты">
-        <img class="md-notes-right" src="/assets/md-notes-right.png" alt="Ноты">
-        <img class="md-notes-bottom" src="/assets/md-notes-bottom.png" alt="Ноты">
+        <img class="md-notes-left" src="data/assets/images/md-notes-left.png" alt="Ноты">
+        <img class="md-notes-right" src="data/assets/images/md-notes-right.png" alt="Ноты">
+        <img class="md-notes-bottom" src="data/assets/images/md-notes-bottom.png" alt="Ноты">
         <div class="md-triangle"></div>
-        <img class="music-players" src="/assets/music-players.png" alt="Музыканты">
+        <img class="music-players" src="data/assets/images/music-players.png" alt="Музыканты">
     </div>
  
     <div id="comics" class="comics-block">
         <div class="comics-label">Комикс в разработке...</div>
-        <img class="comics-watches" src="/assets/comics-watches.png" alt="Часы">
+        <img class="comics-watches" src="data/assets/images/comics-watches.png" alt="Часы">
     </div>
 
     <div id="books">
@@ -334,18 +334,18 @@
         </div>
 
         <div class="books-content">
-            <img class="books-cat" src="/assets/books-smart-cat.png" alt="Кот ученый">
+            <img class="books-cat" src="data/assets/images/books-smart-cat.png" alt="Кот ученый">
             <div class="books-wrapper">
                 <div class="book">
                     <div class="book-image-container">
-                        <img class="unforgetable" src="/assets/book-unforgetable.png" alt="Незабываемая">
+                        <img class="unforgetable" src="data/assets/images/book-unforgetable.png" alt="Незабываемая">
                     </div>
                     <div class="book-name">Анфоргэтэбэл'бл</div>
                     <div class="book-author">Шпагин А.В.</div>
                 </div>
                 <div class="book">
                     <div class="book-image-container">
-                        <img class="unbelievable" src="/assets/book-unbelievable.png" alt="Незабываемая">
+                        <img class="unbelievable" src="data/assets/images/book-unbelievable.png" alt="Незабываемая">
                     </div>
                     <div class="book-name">Унбиливибэл</div>
                     <div class="book-author">Шпагин А.В.</div>
@@ -356,12 +356,12 @@
 
     <div class="footer">
         <div class="footer-line">
-            <img class="young-boys" src="/assets/young-boys.png" alt="Парни">
+            <img class="young-boys" src="data/assets/images/young-boys.png" alt="Парни">
         </div>
         <div class="social">
-            <img src="/assets/youtube.png" alt="YouTube">
-            <img src="/assets/facebook.png" alt="facebook">
-            <img src="/assets/vk.png" alt="vk">
+            <img src="data/assets/images/youtube.png" alt="YouTube">
+            <img src="data/assets/images/facebook.png" alt="facebook">
+            <img src="data/assets/images/vk.png" alt="vk">
         </div>
     </div>
 
