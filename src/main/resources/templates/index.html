@@ -57,7 +57,7 @@
 
             <div class="menu-items-container">
                 <div class="menu-item" ng-repeat="item in menu" ng-click="scrollToAnchor(item.anchorId,true)">
-                    {{item.name}} ({{item.count}}) 
+                    {{item.name}}  {{item.count != 0 ? '(' + item.count + ')' : ''}}
                 </div>
             </div>
 
@@ -100,7 +100,7 @@
 
             <div class="menu-items-container">
                 <div class="menu-item" ng-repeat="item in menu" ng-click="scrollToAnchor(item.anchorId)">
-                    {{item.name}} ({{item.count}}) 
+                    {{item.name}} {{item.count != 0 ? '(' + item.count + ')' : ''}}
                 </div>
             </div>
 
@@ -323,5 +323,36 @@
         <img class="music-players" src="/assets/music-players.png" alt="Музыканты">
     </div>
  
+    <div id="comics" class="comics-block">
+        <div class="comics-label">Комикс в разработке...</div>
+        <img class="comics-watches" src="/assets/comics-watches.png" alt="Часы">
+    </div>
+
+    <div id="books">
+        <div class="books-header">
+            <div class="books-label">Книги</div>
+        </div>
+
+        <div class="books-content">
+            <img class="books-cat" src="/assets/books-smart-cat.png" alt="Кот ученый">
+            <div class="books-wrapper">
+                <div class="book">
+                    <div class="book-image-container">
+                        <img class="unforgetable" src="/assets/book-unforgetable.png" alt="Незабываемая">
+                    </div>
+                    <div class="book-name">Анфоргэтэбэл'бл</div>
+                    <div class="book-author">Шпагин А.В.</div>
+                </div>
+                <div class="book">
+                    <div class="book-image-container">
+                        <img class="unbelievable" src="/assets/book-unbelievable.png" alt="Незабываемая">
+                    </div>
+                    <div class="book-name">Унбиливибэл</div>
+                    <div class="book-author">Шпагин А.В.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body> 
 </html>

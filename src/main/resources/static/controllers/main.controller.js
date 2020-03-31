@@ -246,7 +246,12 @@ angular
                 name: 'Книги',
                 count: 2,
                 anchorId: '#books'
-            } 
+            },
+            {
+                name: 'Комикс',
+                count: '',
+                anchorId: '#comics'
+            }
         ];
 
         $scope.processVideos = function(){

@@ -3,6 +3,11 @@
     src: url(/fonts/klinik.ttf); 
 }
 
+@font-face {
+    font-family: izvestija; 
+    src: url(/fonts/izvestija.ttf); 
+}
+
 html{
     height: 100%;
 }
@@ -396,7 +401,7 @@ h1{
 .menu-item{
     color: white;
     font-size: 19px;
-    padding: 8px;
+    padding: 6px;
 
     cursor: pointer;
 }
@@ -1312,4 +1317,138 @@ h1{
     height: 450px;
 
     z-index: 3;
+}
+
+.comics-block{
+    height: 470px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #92FFBD;
+
+    border-bottom: 20px solid black;
+}
+
+.comics-label{
+    font-family: klinik;
+    font-size: 30px;
+    text-align: center;
+
+    z-index: 2;
+
+    margin: 0;
+    margin-bottom: 8px;
+    margin-top: 30px;
+}
+
+.comics-watches{
+    margin-top: 20px;
+    border: 1px solid black;
+    height: 280px;
+}
+
+.books-block{
+    margin-bottom: 10px;
+}
+
+.books-header{
+    margin: 70px 0;
+
+    margin-left: calc(50% - 75px);
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    border: 2px solid black;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+
+}
+
+.books-header::before{
+    position: absolute;
+    bottom: -7px;
+    content: '';
+
+    width: 100%;
+    border: 1px solid black;
+}
+
+.books-label{
+    font-family: izvestija;
+    font-size: 62px;
+    text-transform: uppercase;
+}
+
+.books-content{
+    background-color: black;
+    position: relative;
+
+    height: 400px;
+
+    margin-bottom: 400px;
+}
+
+.books-cat{
+    position: absolute;
+    left: 0;
+    bottom: -100px;
+
+    height: 660px;
+}
+
+.books-wrapper{
+    margin-left: calc(50% - 90px);
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.books-wrapper .book:first-of-type{
+    margin-left: 0;
+}
+
+.book-image-container{
+    height: 270px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 15px;
+    box-shadow: 8px 8px 0 0 white;
+}
+
+.book{
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+    cursor: pointer;
+    margin-left: 100px;
+}
+
+.book .unforgetable{
+    transform: rotate(90deg);
+    height: 180px;
+    width: 270px;
+}
+
+.book .unbelievable{
+    height: 270px;
+    width: 180px;
+}
+
+.book-name{
+    font-size: 18px;
+}
+
+.book-author{
+    font-size: 14px;
 }
