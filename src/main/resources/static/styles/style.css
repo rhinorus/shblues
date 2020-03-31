@@ -176,7 +176,7 @@ h1{
 
      background-color: #F76DAA;
 
-     width: 602px;
+     width: 593px;
      height: 100px;
 
      top: 175px;
@@ -291,7 +291,7 @@ h1{
 .circle-border-trimmer{
     position: absolute;
     height: 267px;
-    width: 601px;
+    width: 593px;
     border-top-left-radius: 305px;
     border-top-right-radius: 305px;
     border: 4px solid #F76DAA;
@@ -1165,14 +1165,17 @@ h1{
 }
 
 .melodclamations{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center; 
     width: 100%; 
 
-    border: 10px solid black;
+    border: 20px solid black;
     border-left: 0;
     border-right: 0;
+
+    overflow: hidden;
 }
 
 .melodclamations-label{
@@ -1181,19 +1184,39 @@ h1{
 }
 
 .melodclamations-content{
-
+    z-index: 5;
     display: flex;
     flex-direction: column;
-    width: 720px;
+    min-width: 720px; 
+
+    margin-bottom: 200px;
+}
+
+.melodclamations-content .melodclamations-row:first-of-type{
+    margin-left: 0;
+}
+
+.melodclamations-content .melodclamations-row:last-of-type{
+    margin-left: 200px;
 }
 
 .melodclamations-row{
     display: flex;
     align-items: center;
 
-    margin-bottom: 50px; 
+    margin-bottom: 70px; 
+    margin-left: 100px;
 
     cursor: pointer;
+}
+
+.active .melodclamations-name{
+    color: #F76DAA;
+}
+
+.active .parallelogram,
+.active .melodclamations-arrows-wrapper{
+    background-color: #F76DAA;
 }
 
 .melodclamations-row:hover .melodclamations-name{
@@ -1239,4 +1262,54 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.md-notes-left{
+    position: absolute;
+    top: -600px;
+    left: 0;
+
+    z-index: 1;
+}
+
+.md-notes-right{
+    position: absolute;
+    top: -550px;
+    right: 0;
+
+    z-index: 1;
+}
+
+.md-notes-bottom{
+    position: absolute;
+
+    bottom: -300px;
+
+    z-index: 1;
+
+    transform: rotate(-6deg);
+    width: 1300px;
+}
+
+.md-triangle{
+    position: absolute;
+    left: -200px;
+    bottom: 0;
+
+    z-index: 2;
+
+    border: 300px solid transparent;
+    border-bottom: 300px solid #F76DAA;
+    border-left: 300px solid #F76DAA;
+}
+
+.music-players{
+    position: absolute;
+
+    bottom: -150px;
+    left: 0;
+
+    height: 450px;
+
+    z-index: 3;
 }
