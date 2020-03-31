@@ -240,6 +240,10 @@ h1{
     height: calc(1546px - 400px); 
     overflow: hidden;
 
+    padding-bottom: 80px;
+
+    background-color: rgb(255,183,153);
+
 }   
 
 .disco-container{
@@ -496,7 +500,6 @@ h1{
 }
 
 .video-block{
-    margin-top: 80px;
     position: relative;
 
     display: flex;
@@ -1159,4 +1162,81 @@ h1{
     box-sizing: border-box;
 
     box-shadow: 4px 4px 1px 0px;
+}
+
+.melodclamations{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%; 
+
+    border: 10px solid black;
+    border-left: 0;
+    border-right: 0;
+}
+
+.melodclamations-label{
+    margin: 50px 0;
+    height: 40px;
+}
+
+.melodclamations-content{
+
+    display: flex;
+    flex-direction: column;
+    width: 720px;
+}
+
+.melodclamations-row{
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 50px; 
+
+    cursor: pointer;
+}
+
+.melodclamations-row:hover .melodclamations-name{
+    color: #F76DAA;
+}
+
+.melodclamations-row:hover .parallelogram,
+.melodclamations-row:hover .melodclamations-arrows-wrapper{
+    background-color: #F76DAA;
+}
+
+.parallelogram{
+    height: 70px;
+    width: 24px;
+
+    border: 2px solid black;
+    
+    transform: skewX(30deg);
+    box-shadow: 2px 2px 0 0;
+}
+
+.melodclamations-name{
+    margin: 0 50px; 
+
+    font-size: 74px;
+    line-height: 80px;
+
+    letter-spacing: 0.05em;
+
+    color: white; 
+    text-shadow: black 5px 2px 0, 
+                 black -2px 2px 0, 
+                 black 2px -2px 0;
+}
+
+.melodclamations-arrows-wrapper{
+    width: 68px;
+    height: 58px;
+    border: 2px solid black;
+
+    box-shadow: 2px 2px 0 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
