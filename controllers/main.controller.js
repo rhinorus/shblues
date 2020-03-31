@@ -5,235 +5,15 @@ angular
         $scope.showMenu = false
         $scope.showBigMenu = false;
         $scope.activeTrack = null; 
-        $scope.videos = [
-            {
-                name: 'Не орёл',
-                url: 'https://www.youtube.com/watch?v=AtdWfLLSBtI',
-                description: 'Описание видео'
-            },
-            {
-                name: 'Blue bird',
-                url: 'https://www.youtube.com/watch?v=OFt_4o6dqGk',
-                description: 'Описание видео'
-            },
-            {
-                name: 'Fumo di mentolo',
-                url: 'https://www.youtube.com/watch?v=YtvILC9r14E',
-                description: 'Описание видео'
-            },
-            {
-                name: 'КУРИТЬ',
-                url: 'https://www.youtube.com/watch?v=hydZYpXTnrE',
-                description: 'Описание видео'
-            }, //4
-            {
-                name: 'TRAIN',
-                url: 'https://www.youtube.com/watch?v=2KYLw194c9w',
-                description: 'Описание видео'
-            },
-            {
-                name: 'ПРО КОНЯ',
-                url: 'https://www.youtube.com/watch?v=3C6gljuFs6c',
-                description: 'Описание видео'
-            },
-            {
-                name: 'GodKnows',
-                url: 'https://www.youtube.com/watch?v=baQUqhkI5vk',
-                description: 'Описание видео'
-            },
-            {
-                name: 'ADULT CONTENT',
-                url: 'https://www.youtube.com/watch?v=0QxkSGkid54',
-                description: 'Описание видео'
-            }, //8
-            {
-                name: 'HORSE APOCALIPTIC 2018',
-                url: 'https://www.youtube.com/watch?v=YuUAQa274Jw',
-                description: 'Описание видео'
-            }, 
-            {
-                name: 'ТРИ РАЗГОВОРА',
-                url: 'https://www.youtube.com/watch?v=ZCnNNTn9ljY',
-                description: 'Описание видео'
-            },
-            {
-                name: 'Ты узнаешь меня',
-                url: 'https://www.youtube.com/watch?v=WmLktht66T8',
-                description: 'Описание видео'
-            },
-            {
-                name: 'ХаZZбулат',
-                url: 'https://www.youtube.com/watch?v=qxfYx6rHyXI',
-                description: 'Описание видео'
-            }, //12
-            {
-                name: '2 танцора',
-                url: 'https://www.youtube.com/watch?v=xn8t4R-QWWU',
-                description: 'Описание видео'
-            },
-            {
-                name: 'MOM',
-                url: 'https://www.youtube.com/watch?v=8I2NzV3jXeA',
-                description: 'Описание видео'
-            },
-            {
-                name: 'Че',
-                url: 'https://www.youtube.com/watch?v=Xi26azONVUc',
-                description: 'Описание видео'
-            },
-            {
-                name: 'Love for Sale',
-                url: 'https://www.youtube.com/watch?v=v72s4UyNoDs',
-                description: 'Описание видео'
-            },
+        $scope.isPlayerActive = false;
+        $scope.amplitudeInited = false;
 
-        ]; 
-  
-        $scope.tracks = [
-            {
-                name: 'Молодца и сопли красят',
-                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: 'data/assets/tracks/01.wav'
-            },
-            {
-                name: 'Молодца и сопли красят',
-                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: 'data/assets/tracks/01.wav'
-            },
-            {
-                name: 'Молодца и сопли красят',
-                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: 'data/assets/tracks/01.wav'
-            },
-            {
-                name: 'Молодца и сопли красят',
-                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: 'data/assets/tracks/01.wav'
-            }, //4
-            {
-                name: 'Молодца и сопли красят',
-                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: 'data/assets/tracks/01.wav'
-            },
-            {
-                name: 'Молодца и сопли красят',
-                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: 'data/assets/tracks/01.wav'
-            },
-            {
-                name: 'Молодца и сопли красят',
-                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: 'data/assets/tracks/01.wav'
-            },
-            {
-                name: 'Молодца и сопли красят',
-                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: 'data/assets/tracks/01.wav'
-            }, //8
-            {
-                name: 'Молодца и сопли красят',
-                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: 'data/assets/tracks/01.wav'
-            },
-            {
-                name: 'Молодца и сопли красят',
-                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: 'data/assets/tracks/01.wav'
-            },
-            {
-                name: 'Молодца и сопли красят',
-                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: 'data/assets/tracks/01.wav'
-            },
-            {
-                name: 'Молодца и сопли красят',
-                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: 'data/assets/tracks/01.wav'
-            }, //12
-            {
-                name: 'Молодца и сопли красят',
-                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: 'data/assets/tracks/01.wav'
-            },
-            {
-                name: 'Молодца и сопли красят',
-                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: 'data/assets/tracks/01.wav'
-            },
-            {
-                name: 'Молодца и сопли красят',
-                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: 'data/assets/tracks/01.wav'
-            },
-            {
-                name: 'Молодца и сопли красят',
-                description: 'Какое-то описание трека. Длинное описание, хоть и не очень.',
-                file: 'data/assets/tracks/01.wav'
-            }
-        ];
-
-        $scope.mashups = [
-            {
-                name: 'Очень очень очень длинное название',
-                img: 'data/assets/images/tsoi.png',
-                date: '01.01.1900',
-                file: '/assets/tracks/01.wav'
-            },
-            {
-                name: 'Очень очень очень длинное название',
-                img: 'data/assets/images/tsoi.png',
-                date: '01.01.1900',
-                file: '/assets/tracks/01.wav'
-            },
-            {
-                name: 'Очень очень очень длинное название',
-                img: 'data/assets/images/tsoi.png',
-                date: '01.01.1900',
-                file: '/assets/tracks/01.wav'
-            },
-            {
-                name: 'Очень очень очень длинное название',
-                img: 'data/assets/images/tsoi.png',
-                date: '01.01.1900',
-                file: '/assets/tracks/01.wav'
-            }, //4
-            {
-                name: 'Очень очень очень длинное название',
-                img: 'data/assets/images/tsoi.png',
-                date: '01.01.1900',
-                file: '/assets/tracks/01.wav'
-            },
-            {
-                name: 'Очень очень очень длинное название',
-                img: 'data/assets/images/tsoi.png',
-                date: '01.01.1900',
-                file: '/assets/tracks/01.wav'
-            },
-            {
-                name: 'Очень очень очень длинное название',
-                img: 'data/assets/images/tsoi.png',
-                date: '01.01.1900',
-                file: '/assets/tracks/01.wav'
-            },
-            {
-                name: 'Очень очень очень длинное название',
-                img: 'data/assets/images/tsoi.png',
-                date: '01.01.1900',
-                file: '/assets/tracks/01.wav'
-            }, //8
-            {
-                name: 'Очень очень очень длинное название',
-                img: 'data/assets/images/tsoi.png',
-                date: '01.01.1900',
-                file: '/assets/tracks/01.wav'
-            },
-            {
-                name: 'Очень очень очень длинное название',
-                img: 'data/assets/images/tsoi.png',
-                date: '01.01.1900',
-                file: '/assets/tracks/01.wav'
-            }
-        ];
+        $scope.videos = videos;
+        $scope.tracks = tracks;
+        $scope.mashups = mashups;
+        $scope.melodclamations = melodclamations;
+        $scope.books = books;
+        $scope.social = social;
  
         $scope.menu = [
             {
@@ -313,13 +93,22 @@ angular
             if($scope.activeTrack != track){
                 track.active = true;
 
-                if($scope.activeTrack != null)
+                if($scope.activeTrack != null){
                     $scope.activeTrack.active = false;
+                    Amplitude.pause();
+                    Amplitude.removeSong(0);
+                }
+                    
                 $scope.activeTrack = track;
+               
+                $scope.playAudio(track.name, track.file); 
             }
             else{
                 track.active = false;
                 $scope.activeTrack = null;
+                $scope.isPlayerActive = false;
+
+                Amplitude.pause();
             }  
         };
  
@@ -413,6 +202,48 @@ angular
               }, function() {
                 // закрытие окна по клику вне
             });
+        };
+
+        $scope.playAudio = function(name, filePath){
+
+            if(!$scope.amplitudeInited){
+                Amplitude.init({
+                    "songs": [
+                      {
+                        "name": name,
+                        "artist": "Ша-Блюз",
+                        "url": filePath
+                      }
+                    ],
+                    "callbacks": {
+                        'ended': function(){
+                            $timeout(function() {
+                                $scope.isPlayerActive = false;
+                                $scope.setActive($scope.activeTrack);
+                            },0)
+                        }
+                    }
+                  });
+
+                  document.getElementById('song-played-progress').addEventListener('click', function( e ){
+                    var offset = this.getBoundingClientRect();
+                    var x = e.pageX - offset.left;
+                
+                    Amplitude.setSongPlayedPercentage( ( parseFloat( x ) / parseFloat( this.offsetWidth) ) * 100 );
+                  });
+            }
+            else{
+                Amplitude.pause();
+                Amplitude.removeSong(0);
+                Amplitude.addSong({
+                    "name": name,
+                    "artist": "Ша-Блюз",
+                    "url": filePath
+                  });
+            }
+
+              $scope.isPlayerActive = true;
+              Amplitude.play();
         };
 
     });

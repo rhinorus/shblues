@@ -18,6 +18,14 @@
     <!-- jQuery -->
     <script src="data/scripts/jquery-3.4.1.min.js"></script>
 
+    <!-- SETTINGS -->
+    <script src="settings/videos.js"></script>
+    <script src="settings/books.js"></script>
+    <script src="settings/melodclamations.js"></script>
+    <script src="settings/tracks.js"></script>
+    <script src="settings/mashups.js"></script>
+    <script src="settings/social-media.js"></script>
+
     <!-- Angular Material requires Angular.js Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
@@ -29,9 +37,14 @@
      <!-- Angular app file -->
     <script src="data/scripts/angular-app.js"></script>
 
+    <!-- Amplitude lib file -->
+    <script src="data/scripts/amplitude.min.js"></script>
+
     <!-- Controller file -->
     <script src="controllers/main.controller.js"></script>
 
+     <!-- Amplitude font -->
+     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i" rel="stylesheet">
     <!-- B-52 font -->
     <link href="http://allfont.ru/allfont.css?fonts=b52" rel="stylesheet" type="text/css" />
     <!-- Ubuntu font -->
@@ -293,23 +306,23 @@
         <img class="melodclamations-label" src="data/assets/images/melodeclamations-label.png" alt="Мелодекламации">
 
         <div class="melodclamations-content">
-            <div class="melodclamations-row">
+            <div ng-class="melodclamations[0].active ? 'active' : ''" ng-click="setActive(melodclamations[0])" class="melodclamations-row">
                 <div class="parallelogram"></div> 
-                <div class="melodclamations-name">Roomservice</div>
+                <div class="melodclamations-name">{{melodclamations[0].name}}</div>
                 <div class="melodclamations-arrows-wrapper">
                     <img class="arrows" src="data/assets/images/arrows.png" alt="Стрелки">
                 </div>
             </div>
-            <div class="melodclamations-row">
+            <div ng-class="melodclamations[1].active ? 'active' : ''" ng-click="setActive(melodclamations[1])" class="melodclamations-row">
                 <div class="parallelogram"></div> 
-                <div class="melodclamations-name">Summertime</div>
+                <div class="melodclamations-name">{{melodclamations[1].name}}</div>
                 <div class="melodclamations-arrows-wrapper">
                     <img class="arrows" src="data/assets/images/arrows.png" alt="Стрелки">
                 </div>
             </div>
-            <div class="melodclamations-row">
+            <div ng-class="melodclamations[2].active ? 'active' : ''" ng-click="setActive(melodclamations[2])" class="melodclamations-row">
                 <div class="parallelogram"></div> 
-                <div class="melodclamations-name">Sunny</div>  
+                <div class="melodclamations-name">{{melodclamations[2].name}}</div>  
                 <div class="melodclamations-arrows-wrapper">
                     <img class="arrows" src="data/assets/images/arrows.png" alt="Стрелки">
                 </div>
@@ -336,20 +349,24 @@
         <div class="books-content">
             <img class="books-cat" src="data/assets/images/books-smart-cat.png" alt="Кот ученый">
             <div class="books-wrapper">
-                <div class="book">
-                    <div class="book-image-container">
-                        <img class="unforgetable" src="data/assets/images/book-unforgetable.png" alt="Незабываемая">
+                <a href="{{books[0]}}" target="_blank">
+                    <div class="book">
+                        <div class="book-image-container">
+                            <img class="unforgetable" src="data/assets/images/book-unforgetable.png" alt="Незабываемая">
+                        </div>
+                        <div class="book-name">Анфоргэтэбэл'бл</div>
+                        <div class="book-author">Шпагин А.В.</div>
                     </div>
-                    <div class="book-name">Анфоргэтэбэл'бл</div>
-                    <div class="book-author">Шпагин А.В.</div>
-                </div>
-                <div class="book">
-                    <div class="book-image-container">
-                        <img class="unbelievable" src="data/assets/images/book-unbelievable.png" alt="Незабываемая">
+                </a>
+                <a href="{{books[1]}}" target="_blank" style="margin-left: 100px">
+                    <div class="book">
+                        <div class="book-image-container">
+                            <img class="unbelievable" src="data/assets/images/book-unbelievable.png" alt="Незабываемая">
+                        </div>
+                        <div class="book-name">Унбиливибэл</div>
+                        <div class="book-author">Шпагин А.В.</div>
                     </div>
-                    <div class="book-name">Унбиливибэл</div>
-                    <div class="book-author">Шпагин А.В.</div>
-                </div>
+                </a>       
             </div>
         </div>
     </div>
@@ -359,9 +376,39 @@
             <img class="young-boys" src="data/assets/images/young-boys.png" alt="Парни">
         </div>
         <div class="social">
-            <img src="data/assets/images/youtube.png" alt="YouTube">
-            <img src="data/assets/images/facebook.png" alt="facebook">
-            <img src="data/assets/images/vk.png" alt="vk">
+            <a href="{{social.youtube}}" target="_blank">
+                <img src="data/assets/images/youtube.png" alt="YouTube">
+            
+            <a href="{{social.facebook}}" target="_blank">
+                <img src="data/assets/images/facebook.png" alt="facebook">
+            </a>
+            <a href="{{social.vk}}" target="_blank">
+                <img src="data/assets/images/vk.png" alt="vk">
+            </a> 
+        </div>
+    </div>
+
+    <div id="single-song-player" ng-show="isPlayerActive">
+        <img data-amplitude-song-info="cover_art_url"/>
+        <div class="bottom-container">
+            <progress class="amplitude-song-played-progress" id="song-played-progress"></progress>
+
+            <div class="time-container">
+                <span class="current-time">
+                <span class="amplitude-current-minutes"></span>:<span class="amplitude-current-seconds"></span>
+                </span>
+                <span class="duration">
+                <span class="amplitude-duration-minutes"></span>:<span class="amplitude-duration-seconds"></span>
+                </span>
+            </div>
+
+            <div class="control-container">
+                <div class="amplitude-play-pause" id="play-pause"></div>
+                <div class="meta-container">
+                <span data-amplitude-song-info="name" class="song-name"></span>
+                <span data-amplitude-song-info="artist"></span>
+                </div>
+            </div>
         </div>
     </div>
 
