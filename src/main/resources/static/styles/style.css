@@ -1452,3 +1452,49 @@ h1{
 .book-author{
     font-size: 14px;
 }
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.footer-line{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background-color: #F76DAA;
+
+    margin-bottom: 100px;
+}
+
+.young-boys{
+    height: 400px;
+    transform: rotate(-19.76deg);
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 1;
+
+    margin: auto;
+}
+
+.social{
+    display: flex;
+    align-items: center;
+
+    z-index: 2;
+}
+
+.social img{
+    margin: 30px;
+    height: 52px;
+
+    cursor: pointer;
+}
