@@ -149,7 +149,7 @@
             <div class="video-content">
 
                 <div class="row">
-                    <div class="col-3 video-content-row" ng-repeat="video in videos"> 
+                    <div class="col-3 video-content-row" ng-repeat="video in videos" ng-click="showVideo($index, video)">  
                         <div class="tooltipable video-item" data-tooltip="{{'video-' + $index}}">
                             <div class="video-item-image-wrapper">
                                 <img src="{{video.src}}" alt="Mom, I'm in TV!">
@@ -293,7 +293,7 @@
         <img class="melodclamations-label" src="data/assets/images/melodeclamations-label.png" alt="Мелодекламации">
 
         <div class="melodclamations-content">
-            <div class="melodclamations-row active">
+            <div class="melodclamations-row">
                 <div class="parallelogram"></div> 
                 <div class="melodclamations-name">Roomservice</div>
                 <div class="melodclamations-arrows-wrapper">
