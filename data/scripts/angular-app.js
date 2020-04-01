@@ -1,1 +1,1 @@
-angular.module('shblues', ['ngMaterial', 'ngMessages', 'ngAnimate']);
+angular.module('shblues', ['ngMaterial', 'ngMessages', 'ngAnimate', 'ngSanitize']);

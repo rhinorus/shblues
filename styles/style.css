@@ -204,7 +204,7 @@ h1{
 }
 
 .top-disco-container > .menu-items-container > .menu-item{
-    padding: 3px;
+    padding: 2px;
 }
  
 .big-top-menu.ng-hide-add,
@@ -1511,6 +1511,8 @@ md-dialog{
     background-color: rgba(255,255,255,0.4) !important;
 }
 
+/* Video modal SECTION */
+
 .video-modal{
     height: 1030px;
     width: 930px;
@@ -1597,6 +1599,25 @@ md-dialog{
 .vm-right-arrow{
     margin-right: 10px;
     transform: rotate(180deg);
+}
+
+/* Announcements SECTION */
+
+.announcements-description{
+    font-size: 14px;
+    padding-bottom: 25px;
+ 
+    height: auto;
+}
+
+.announcements-image-wapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.announcements-image-wapper img{
+    max-width: 100%;
 }
 
 /* AMPLITUDE JS SECTION */
@@ -1697,8 +1718,7 @@ div.control-container {
   */
   div.bottom-container {
     background-color: #202136;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px; }
+ }
   
   /*
     Large Only

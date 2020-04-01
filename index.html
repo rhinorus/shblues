@@ -25,10 +25,13 @@
     <script src="settings/tracks.js"></script>
     <script src="settings/mashups.js"></script>
     <script src="settings/social-media.js"></script>
+    <script src="settings/announcements.js"></script>
+    <script src="settings/recomendations.js"></script>
 
     <!-- Angular Material requires Angular.js Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
+    <script src="data/scripts/angular-santize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-messages.min.js"></script>
 
@@ -75,11 +78,11 @@
             </div>
 
             <div class="anonses-recommended">
-                <div class="rounded-notify">
+                <div class="rounded-notify" ng-click="showAnnouncements()">
                     <img src="data/assets/images/alert.png" alt="alert">
                     <div>Анонсы</div>
                 </div>
-                <div class="rounded-notify">
+                <div class="rounded-notify" ng-click="showRecomendations()">
                     <img src="data/assets/images/like.png" alt="alert">
                     <div>Рекомендации</div> 
                 </div>
@@ -118,11 +121,11 @@
             </div>
 
             <div class="anonses-recommended">
-                <div class="rounded-notify">
+                <div class="rounded-notify" ng-click="showAnnouncements()">
                     <img src="data/assets/images/alert.png" alt="alert">
                     <div>Анонсы</div>
                 </div>
-                <div class="rounded-notify">
+                <div class="rounded-notify" ng-click="showRecomendations()">
                     <img src="data/assets/images/like.png" alt="alert">
                     <div>Рекомендации</div> 
                 </div>

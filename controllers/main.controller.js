@@ -2,11 +2,19 @@ angular
     .module("shblues")
     .controller("mainController", function MenuController($scope, $mdDialog, $window, $timeout, $sce) {
  
+        //========================
+        // Base settings
+        //========================
+
         $scope.showMenu = false
         $scope.showBigMenu = false;
         $scope.activeTrack = null; 
         $scope.isPlayerActive = false;
         $scope.amplitudeInited = false;
+
+        //========================
+        // Settings
+        //========================
 
         $scope.videos = videos;
         $scope.tracks = tracks;
@@ -14,7 +22,14 @@ angular
         $scope.melodclamations = melodclamations;
         $scope.books = books;
         $scope.social = social;
+
+        $scope.announcements = announcements;
+        $scope.recomendations = recomendations;
  
+        //========================
+        // Menu
+        //========================
+
         $scope.menu = [
             {
                 name: 'Видео',
@@ -47,6 +62,10 @@ angular
                 anchorId: '#comics'
             }
         ];
+
+        //========================
+        // Methods
+        //========================
 
         $scope.processVideos = function(){
             for(var video of $scope.videos){
@@ -144,8 +163,6 @@ angular
                 $scope.parent = parent;
                 $scope.index = index;
                 $scope.video = video;
-
-                console.log(video.id);
                 
                 $scope.hide = function() {
                     $mdDialog.hide();
@@ -244,6 +261,87 @@ angular
 
               $scope.isPlayerActive = true;
               Amplitude.play();
+        };
+
+        $scope.showAnnouncements = function(){
+
+            function DialogController($scope, $mdDialog, parent, announcements) {   
+                
+                $scope.parent = parent;
+                $scope.announcements = announcements;
+                
+                $scope.hide = function() {
+                    $mdDialog.hide();
+                };
+                
+            }
+    
+            $mdDialog.show({
+                controller: DialogController,
+                locals: {
+                    parent: $scope,
+                    announcements: $scope.announcements
+                },
+                template: 
+                        '<div class="video-modal" ng-cloak> ' +
+                            '<div class="vm-header">' + 
+                                '<div class="vm-header-label">Анонсы</div>' +
+                                '<img class="close-image" src="data/assets/images/close.png" label="close" ng-click="hide()">' +
+                            '</div>' +
+                            '<div class="about-video">{{announcements.name}}</div>' + 
+                            '<div class="announcements-description" ng-bind-html="announcements.description"></div>' +
+                            '<div class="announcements-image-wapper" ng-show="announcements.image != null">' + 
+                                '<img src="{{announcements.image}}">' +
+                            '</div>' +
+                        '</div>',
+
+                clickOutsideToClose: true
+              })
+              .then(function() {
+                // окно закрыто по кнопке
+              }, function() {
+                // закрытие окна по клику вне
+            });
+        };
+
+        $scope.showRecomendations = function(){
+            function DialogController($scope, $mdDialog, parent, recomendations) {   
+                
+                $scope.parent = parent;
+                $scope.recomendations = recomendations;
+                
+                $scope.hide = function() {
+                    $mdDialog.hide();
+                };
+                
+            }
+    
+            $mdDialog.show({
+                controller: DialogController,
+                locals: {
+                    parent: $scope,
+                    recomendations: $scope.recomendations
+                },
+                template: 
+                        '<div class="video-modal" ng-cloak> ' +
+                            '<div class="vm-header">' + 
+                                '<div class="vm-header-label">Рекомендации</div>' +
+                                '<img class="close-image" src="data/assets/images/close.png" label="close" ng-click="hide()">' +
+                            '</div>' +
+                            '<div class="about-video">{{recomendations.name}}</div>' + 
+                            '<div class="announcements-description" ng-bind-html="recomendations.description"></div>' +
+                            '<div class="announcements-image-wapper" ng-show="recomendations.image != null">' + 
+                                '<img src="{{recomendations.image}}">' +
+                            '</div>' +
+                        '</div>',
+
+                clickOutsideToClose: true
+              })
+              .then(function() {
+                // окно закрыто по кнопке
+              }, function() {
+                // закрытие окна по клику вне
+            });
         };
 
     });
