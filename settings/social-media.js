@@ -1,5 +1,5 @@
 var social = {
-    youtube: 'https://www.youtube.com/channel/UCywxAqZKc4byM-ArcIe3yeA', // СЃСЃС‹Р»РєР° РЅР° Р®С‚СѓР±
-    facebook: 'https://facebook.com', // СЃСЃС‹Р»РєР° РЅР° С„РµР№СЃР±СѓРє
-    vk: 'https://vk.com' // СЃСЃС‹Р»РєР° РЅР° РіСЂСѓРїРїСѓ РІРєРѕРЅС‚Р°РєС‚Рµ
-};
+    youtube: 'https://www.youtube.com/channel/UCywxAqZKc4byM-ArcIe3yeA', // ссылка на Ютуб
+    facebook: 'https://facebook.com', // ссылка на фейсбук
+    vk: 'https://vk.com' // ссылка на группу вконтакте
+}; 

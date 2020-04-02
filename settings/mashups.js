@@ -1,60 +1,60 @@
-var mashups = [
+var mashups = [ 
     {
-        name: 'РћС‡РµРЅСЊ РѕС‡РµРЅСЊ РѕС‡РµРЅСЊ РґР»РёРЅРЅРѕРµ РЅР°Р·РІР°РЅРёРµ',
+        name: 'Очень очень очень длинное название',
         img: 'data/assets/images/tsoi.png',
         date: '01.01.1900',
         file: 'data/assets/audio/roses.mp3'
     },
     {
-        name: 'РћС‡РµРЅСЊ РѕС‡РµРЅСЊ РѕС‡РµРЅСЊ РґР»РёРЅРЅРѕРµ РЅР°Р·РІР°РЅРёРµ',
+        name: 'Очень очень очень длинное название',
         img: 'data/assets/images/tsoi.png',
         date: '01.01.1900',
         file: 'data/assets/audio/roses.mp3'
     },
     {
-        name: 'РћС‡РµРЅСЊ РѕС‡РµРЅСЊ РѕС‡РµРЅСЊ РґР»РёРЅРЅРѕРµ РЅР°Р·РІР°РЅРёРµ',
+        name: 'Очень очень очень длинное название',
         img: 'data/assets/images/tsoi.png',
         date: '01.01.1900',
         file: 'data/assets/audio/roses.mp3'
     },
     {
-        name: 'РћС‡РµРЅСЊ РѕС‡РµРЅСЊ РѕС‡РµРЅСЊ РґР»РёРЅРЅРѕРµ РЅР°Р·РІР°РЅРёРµ',
+        name: 'Очень очень очень длинное название',
         img: 'data/assets/images/tsoi.png',
         date: '01.01.1900',
         file: 'data/assets/audio/roses.mp3'
     }, //4
     {
-        name: 'РћС‡РµРЅСЊ РѕС‡РµРЅСЊ РѕС‡РµРЅСЊ РґР»РёРЅРЅРѕРµ РЅР°Р·РІР°РЅРёРµ',
+        name: 'Очень очень очень длинное название',
         img: 'data/assets/images/tsoi.png',
         date: '01.01.1900',
         file: 'data/assets/audio/roses.mp3'
     },
     {
-        name: 'РћС‡РµРЅСЊ РѕС‡РµРЅСЊ РѕС‡РµРЅСЊ РґР»РёРЅРЅРѕРµ РЅР°Р·РІР°РЅРёРµ',
+        name: 'Очень очень очень длинное название',
         img: 'data/assets/images/tsoi.png',
         date: '01.01.1900',
         file: 'data/assets/audio/roses.mp3'
     },
     {
-        name: 'РћС‡РµРЅСЊ РѕС‡РµРЅСЊ РѕС‡РµРЅСЊ РґР»РёРЅРЅРѕРµ РЅР°Р·РІР°РЅРёРµ',
+        name: 'Очень очень очень длинное название',
         img: 'data/assets/images/tsoi.png',
         date: '01.01.1900',
         file: 'data/assets/audio/roses.mp3'
     },
     {
-        name: 'РћС‡РµРЅСЊ РѕС‡РµРЅСЊ РѕС‡РµРЅСЊ РґР»РёРЅРЅРѕРµ РЅР°Р·РІР°РЅРёРµ',
+        name: 'Очень очень очень длинное название',
         img: 'data/assets/images/tsoi.png',
         date: '01.01.1900',
         file: 'data/assets/audio/roses.mp3'
     }, //8
     {
-        name: 'РћС‡РµРЅСЊ РѕС‡РµРЅСЊ РѕС‡РµРЅСЊ РґР»РёРЅРЅРѕРµ РЅР°Р·РІР°РЅРёРµ',
+        name: 'Очень очень очень длинное название',
         img: 'data/assets/images/tsoi.png',
         date: '01.01.1900',
         file: 'data/assets/audio/roses.mp3'
     },
     {
-        name: 'РћС‡РµРЅСЊ РѕС‡РµРЅСЊ РѕС‡РµРЅСЊ РґР»РёРЅРЅРѕРµ РЅР°Р·РІР°РЅРёРµ',
+        name: 'Очень очень очень длинное название',
         img: 'data/assets/images/tsoi.png',
         date: '01.01.1900',
         file: 'data/assets/audio/roses.mp3'

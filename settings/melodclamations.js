@@ -1,5 +1,5 @@
 var melodclamations = [
-    {
+    { 
         name: 'Roomservice',
         file: 'data/assets/audio/roses.mp3'
     },

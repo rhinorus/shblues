@@ -1,5 +1,5 @@
 angular
-    .module("shblues")
+    .module("shblues") 
     .controller("mainController", function MenuController($scope, $mdDialog, $window, $timeout, $sce) {
  
         //========================
@@ -32,32 +32,32 @@ angular
 
         $scope.menu = [
             {
-                name: 'Р’РёРґРµРѕ',
+                name: 'Видео',
                 count: $scope.videos.length,
                 anchorId: '#videos'
             },
             {
-                name: 'РЁР°-Р‘Р»СЋР· С‚СЂРµРєРё',
+                name: 'Ша-Блюз треки',
                 count: $scope.tracks.length,
                 anchorId: '#tracks'
             },
             {
-                name: 'РњСЌС€Р°РїС‹',
+                name: 'Мэшапы',
                 count: $scope.mashups.length,
                 anchorId: '#mashups'
             },
             {
-                name: 'РњРµР»РѕРґРµРєР»Р°РјР°С†РёРё',
+                name: 'Мелодекламации',
                 count: 3,
                 anchorId: '#melodclamations'
             },
             {
-                name: 'РљРЅРёРіРё',
+                name: 'Книги',
                 count: 2,
                 anchorId: '#books'
             },
             {
-                name: 'РљРѕРјРёРєСЃ',
+                name: 'Комикс',
                 count: '',
                 anchorId: '#comics'
             }
@@ -204,20 +204,20 @@ angular
                             '<div class="vm-content">' +
                                 '<iframe ng-src="{{video.id}}"></iframe>' +
                             '</div>' +
-                            '<div class="about-video">Рћ РІРёРґРµРѕ</div>' + 
+                            '<div class="about-video">О видео</div>' + 
                             '<div class="video-description">{{video.description}}</div>' +
                             '<div class="vm-actions">' +
-                                '<div ng-click="previousVideo()" class="vm-action"><img class="vm-left-arrow" src="data/assets/images/vm-arrow.png"><div style="margin-right: 10px;">РўРЈР”Рђ</div></div>' +
-                                '<div ng-click="nextVideo()" class="vm-action"><div style="margin-left: 10px;">РЎР®Р”Рђ</div><img class="vm-right-arrow" src="data/assets/images/vm-arrow.png"></div>' +
+                                '<div ng-click="previousVideo()" class="vm-action"><img class="vm-left-arrow" src="data/assets/images/vm-arrow.png"><div style="margin-right: 10px;">ТУДА</div></div>' +
+                                '<div ng-click="nextVideo()" class="vm-action"><div style="margin-left: 10px;">СЮДА</div><img class="vm-right-arrow" src="data/assets/images/vm-arrow.png"></div>' +
                             '</div>' +
                         '</div>',
 
                 clickOutsideToClose: true
               })
               .then(function() {
-                // РѕРєРЅРѕ Р·Р°РєСЂС‹С‚Рѕ РїРѕ РєРЅРѕРїРєРµ
+                // окно закрыто по кнопке
               }, function() {
-                // Р·Р°РєСЂС‹С‚РёРµ РѕРєРЅР° РїРѕ РєР»РёРєСѓ РІРЅРµ
+                // закрытие окна по клику вне
             });
         };
 
@@ -228,7 +228,7 @@ angular
                     "songs": [
                       {
                         "name": name,
-                        "artist": "РЁР°-Р‘Р»СЋР·",
+                        "artist": "Ша-Блюз",
                         "url": filePath
                       }
                     ],
@@ -254,7 +254,7 @@ angular
                 Amplitude.removeSong(0);
                 Amplitude.addSong({
                     "name": name,
-                    "artist": "РЁР°-Р‘Р»СЋР·",
+                    "artist": "Ша-Блюз",
                     "url": filePath
                   });
             }
@@ -285,7 +285,7 @@ angular
                 template: 
                         '<div class="video-modal" ng-cloak> ' +
                             '<div class="vm-header">' + 
-                                '<div class="vm-header-label">РђРЅРѕРЅСЃС‹</div>' +
+                                '<div class="vm-header-label">Анонсы</div>' +
                                 '<img class="close-image" src="data/assets/images/close.png" label="close" ng-click="hide()">' +
                             '</div>' +
                             '<div class="about-video">{{announcements.name}}</div>' + 
@@ -298,9 +298,9 @@ angular
                 clickOutsideToClose: true
               })
               .then(function() {
-                // РѕРєРЅРѕ Р·Р°РєСЂС‹С‚Рѕ РїРѕ РєРЅРѕРїРєРµ
+                // окно закрыто по кнопке
               }, function() {
-                // Р·Р°РєСЂС‹С‚РёРµ РѕРєРЅР° РїРѕ РєР»РёРєСѓ РІРЅРµ
+                // закрытие окна по клику вне
             });
         };
 
@@ -325,7 +325,7 @@ angular
                 template: 
                         '<div class="video-modal" ng-cloak> ' +
                             '<div class="vm-header">' + 
-                                '<div class="vm-header-label">Р РµРєРѕРјРµРЅРґР°С†РёРё</div>' +
+                                '<div class="vm-header-label">Рекомендации</div>' +
                                 '<img class="close-image" src="data/assets/images/close.png" label="close" ng-click="hide()">' +
                             '</div>' +
                             '<div class="about-video">{{recomendations.name}}</div>' + 
@@ -338,9 +338,9 @@ angular
                 clickOutsideToClose: true
               })
               .then(function() {
-                // РѕРєРЅРѕ Р·Р°РєСЂС‹С‚Рѕ РїРѕ РєРЅРѕРїРєРµ
+                // окно закрыто по кнопке
               }, function() {
-                // Р·Р°РєСЂС‹С‚РёРµ РѕРєРЅР° РїРѕ РєР»РёРєСѓ РІРЅРµ
+                // закрытие окна по клику вне
             });
         };
 
