@@ -35,11 +35,11 @@ h1{
 }
 
 @keyframes move-move {
-    0% { transform: rotate(-20deg); }
-    20% { transform: rotate(3deg); }
-    40% {transform: rotate(-7deg);}
-    70% {transform: rotate(7deg);}
-    100% { transform: rotate(-20deg); } 
+    0% { transform: rotate(-40deg); }
+    20% { transform: rotate(-14deg); }
+    40% {transform: rotate(-24deg);}
+    70% {transform: rotate(-10deg);}
+    100% { transform: rotate(-40deg); } 
 } 
 
 /* =============================
@@ -242,12 +242,11 @@ h1{
     justify-self: center; 
     align-items: center;
 
-    height: calc(1546px - 400px + 80px); 
+    height: calc(1546px - 400px); 
     overflow: hidden;
 
-    padding-bottom: 80px;
-
-    background-color: rgb(255,183,153);
+    background-image: url(../data/assets/images/wood.png);
+    background-size: 300px;
 
 }   
 
@@ -258,9 +257,9 @@ h1{
 
 .disco-img{
     position: absolute;
-    top: -400px;
-    height: 1546px;
-    left: -773px;
+    top: -238px;
+    height: 1200px;
+    left: -600px;
 
     animation: 4s rotate360 infinite linear;
 }
@@ -465,7 +464,7 @@ h1{
     align-items: center;
 
     position: absolute;
-    bottom: 440px;
+    bottom: 445px;
 
     cursor: pointer;
 }
@@ -495,12 +494,9 @@ h1{
  
 .prickly-thing{
     position: absolute;
-
-    top: -650px;
-    right: -150px;
-
+    top: -625px;
+    right: -165px;
     height: 1200px;
-
     animation: 6s move-move infinite linear;
 }
 
@@ -749,6 +745,7 @@ h1{
 
     position: relative;
     width: 100%;
+    height: 100%;
 }
  
 .tracks-images-container{
@@ -1013,8 +1010,6 @@ h1{
 }
 
 .mashups{
-    height: 1250px;
-
     display: flex;
     flex-direction: column; 
     align-items: center;
@@ -1050,6 +1045,7 @@ h1{
 
     padding: 0 5px;
     padding-top: 50px;
+    margin-bottom: 100px;
 }
 
 .mashups-top{
@@ -1080,19 +1076,59 @@ h1{
     display: flex;
     flex-direction: column;
 
+    cursor: pointer;
+    position: relative;
+
+    perspective: 1000;
+}
+
+ .mashups-item:hover .mashups-front{
+    transform: rotateY(180deg);
+}
+
+.mashups-item:hover .mashups-back{
+    transform: rotateY(0deg);
+}
+
+.mashups-front, .mashups-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 225px;
+    width: 170px;
+
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
     border: 2px solid black;
     box-shadow: 4px 4px 1px 0px;
 
-    cursor: pointer;
+    backface-visibility: hidden;
 
-    position: relative;
+    background-color: #D1C3C6;
 }
 
-.mashups-item.active > img.mashups-item-image{
+.mashups-front{
+    z-index: 2;
+    padding: 0 5px;
+}
+
+.mashups-back{
+    transform: rotateY(180deg);
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.mashups-item.active img.mashups-item-image{
     display: block !important;
 }
 
-.mashups-item > img.mashups-item-image{
+.mashups-item img.mashups-item-image{
     height: 20px;
     width: 20px;
     padding: 0;
@@ -1104,7 +1140,8 @@ h1{
     right: 7px;
 }
 
-.mashups-item.active{
+.mashups-item.active .mashups-front,
+.mashups-item.active .mashups-back{
     background-color: lightblue;
 }
 
@@ -1112,7 +1149,7 @@ h1{
     margin: 10px 10px 5px 10px;
 
     font-size: 14px;
-    line-height: 16px;
+    line-height: 20px;
 }
 
 .mashups-date{
@@ -1515,9 +1552,11 @@ h1{
 }
 
 md-dialog{
-    box-shadow: 10px 10px 0 0 !important;
-    border-radius: 0 !important;
-    border: 1px solid black !important;
+    background-color: transparent;
+    overflow: visible !important;
+
+    height: 0;
+    width: 0; 
 }
 
 .md-dialog-container{
@@ -1526,15 +1565,135 @@ md-dialog{
 
 /* Video modal SECTION */
 
+.tv-container{
+    position: relative;
+    height: 495px;
+    width: 726px;
+}
+
+.tv{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -363px;
+    width: 900px;
+
+    margin: auto;
+
+    pointer-events: none;
+}
+
+.tv-black-background{
+    position: absolute;
+    width: 600px;
+    height: 500px;
+
+    top: 0;
+    left: -200px;
+    bottom: 0;
+
+    margin: auto;
+
+    background-color: black;
+}
+
+.tv-frame{
+    position: absolute;
+
+    height: 480px;
+    width: 680px;
+    left: -526px;
+    top: -65px;
+    bottom: 0;
+    right: 0;
+
+    margin: auto;
+
+    border: 40px solid black;
+}
+
+.tv-btn-previous{
+    width: 50px;
+    position: absolute;
+    left: 0;
+    right: -382px;
+    top: 275px;
+    bottom: 0;
+
+    margin: auto;
+
+    cursor: pointer;
+
+    transform: rotate(90deg);
+}
+
+.tv-btn-previous:hover{
+    border: 3px solid rgba(255,255,255,0.7);
+    border-radius: 50%;
+    box-sizing: content-box;
+}
+
+.tv-btn-next{
+    width: 50px;
+
+    position: absolute;
+    left: 0;
+    right: -382px;
+    top: 54px;
+    bottom: 0;
+    
+    margin: auto;
+    cursor: pointer;
+}
+
+.tv-btn-next:hover{
+    border: 3px solid rgba(255,255,255,0.7);
+    border-radius: 50%;
+    box-sizing: content-box;
+}
+
+.tv-arrow-right{
+
+    position: absolute;
+    left: 0;
+    right: -452px;
+    top: 52px;
+    bottom: 0;
+
+    margin: auto;
+}
+
+.tv-arrow-left{
+    position: absolute;
+    left: 0;
+    right: -313px;
+    top: 274px;
+    bottom: 0;
+
+    margin: auto;
+    transform: rotate(180deg);
+}
+
 .video-modal{
-    height: 1030px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: -25vw;
+    bottom: 0;
+    margin: auto;
+
+    height: 800px;
     width: 930px;
 
     padding: 50px 100px;
 
-    box-shadow: 10px 10px 0 0;
-
     overflow: hidden;
+    background-color: white;
+
+    box-shadow: 10px 10px 0 0 !important;
+    border-radius: 0 !important;
+    border: 1px solid black !important;
 }
 
 .vm-header{

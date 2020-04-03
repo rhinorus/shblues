@@ -149,14 +149,20 @@ angular
                     if(index > 7 && index < 10)
                         return true;
                     break;
+                case 'addictional':
+                    if(index >= 10) 
+                        return true;
+                    break;
                 default:
                     break;
             }
 
             return false;
         };
-
+ 
         $scope.showVideo = function(index, video){
+
+            $scope.turnAudioOff();
 
             function DialogController($scope, $mdDialog, parent, index, video) {   
                 
@@ -196,21 +202,15 @@ angular
                     video: video
                 },
                 template: 
-                        '<div class="video-modal" ng-cloak> ' +
-                            '<div class="vm-header">' + 
-                                '<div class="vm-header-label">{{video.name}}</div>' +
-                                '<img class="close-image" src="data/assets/images/close.png" label="close" ng-click="hide()">' +
-                            '</div>' +
-                            '<div class="vm-content">' +
-                                '<iframe ng-src="{{video.id}}"></iframe>' +
-                            '</div>' +
-                            '<div class="about-video">О видео</div>' + 
-                            '<div class="video-description">{{video.description}}</div>' +
-                            '<div class="vm-actions">' +
-                                '<div ng-click="previousVideo()" class="vm-action"><img class="vm-left-arrow" src="data/assets/images/vm-arrow.png"><div style="margin-right: 10px;">ТУДА</div></div>' +
-                                '<div ng-click="nextVideo()" class="vm-action"><div style="margin-left: 10px;">СЮДА</div><img class="vm-right-arrow" src="data/assets/images/vm-arrow.png"></div>' +
-                            '</div>' +
-                        '</div>',
+                        '<div class="tv-container" ng-cloak> ' +
+                            '<div class="tv-black-background"></div>' +
+                            '<iframe class="tv-frame" ng-src="{{video.id}}"></iframe>' +
+                            '<img class="tv" src="data/assets/images/tv.png">' +
+                            '<img class="tv-btn-previous" ng-click="previousVideo()" src="data/assets/images/tv-turn.png" >' +
+                            '<img class="tv-btn-next" ng-click="nextVideo()" src="data/assets/images/tv-turn.png" >' +
+                            '<img class="tv-arrow-right" src="data/assets/images/turn-arrow.png" >' +
+                            '<img class="tv-arrow-left" src="data/assets/images/turn-arrow.png" >' +
+                        '</div>', 
 
                 clickOutsideToClose: true
               })
@@ -220,7 +220,7 @@ angular
                 // закрытие окна по клику вне
             });
         };
-
+ 
         $scope.playAudio = function(name, filePath){
 
             if(!$scope.amplitudeInited){
@@ -247,11 +247,10 @@ angular
                     var x = e.pageX - offset.left;
                 
                     Amplitude.setSongPlayedPercentage( ( parseFloat( x ) / parseFloat( this.offsetWidth) ) * 100 );
-                  });
+                  });        
             }
             else{
-                Amplitude.pause();
-                Amplitude.removeSong(0);
+                $scope.turnAudioOff();
                 Amplitude.addSong({
                     "name": name,
                     "artist": "Ша-Блюз",
@@ -261,9 +260,24 @@ angular
 
               $scope.isPlayerActive = true;
               Amplitude.play();
+              $timeout(function(){ 
+                $("#play-pause").addClass("amplitude-playing");
+                $("#play-pause").removeClass("amplitude-paused"); 
+              },0);
+        };
+ 
+        $scope.turnAudioOff = function(){
+            $timeout(function(){
+                if($scope.isPlayerActive){
+                    $scope.isPlayerActive = false;
+                    $scope.setActive($scope.activeTrack);
+                }
+            },0);
         };
 
         $scope.showAnnouncements = function(){
+
+            $scope.turnAudioOff();
 
             function DialogController($scope, $mdDialog, parent, announcements) {   
                 
@@ -305,6 +319,9 @@ angular
         };
 
         $scope.showRecomendations = function(){
+           
+            $scope.turnAudioOff();
+
             function DialogController($scope, $mdDialog, parent, recomendations) {   
                 
                 $scope.parent = parent;
