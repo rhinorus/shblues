@@ -82,5 +82,33 @@ var mashups = [
         date: '01.01.1900',
         description: 'Очень очень очень длинное описание',
         file: 'data/assets/audio/roses.mp3'
+    },
+    {
+        name: 'Очень очень очень длинное название',
+        img: 'data/assets/images/tsoi.png',
+        date: '01.01.1900',
+        description: 'Очень очень очень длинное описание',
+        file: 'data/assets/audio/roses.mp3'
+    },
+    {
+        name: 'Очень очень очень длинное название',
+        img: 'data/assets/images/tsoi.png',
+        date: '01.01.1900',
+        description: 'Очень очень очень длинное описание',
+        file: 'data/assets/audio/roses.mp3'
+    },
+    {
+        name: 'Очень очень очень длинное название',
+        img: 'data/assets/images/tsoi.png',
+        date: '01.01.1900',
+        description: 'Очень очень очень длинное описание',
+        file: 'data/assets/audio/roses.mp3'
+    },
+    {
+        name: 'Очень очень очень длинное название',
+        img: 'data/assets/images/tsoi.png',
+        date: '01.01.1900',
+        description: 'Очень очень очень длинное описание',
+        file: 'data/assets/audio/roses.mp3'
     }
 ];

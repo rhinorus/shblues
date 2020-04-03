@@ -73,7 +73,7 @@ angular
                 if(id.includes('&'))
                     id = id.split('&')[0];
                 video.id =  $sce.trustAsResourceUrl('https://www.youtube.com/embed/' + id);
-                video.src = "http://i3.ytimg.com/vi/" + id + "/hqdefault.jpg";
+                video.src = "http://i3.ytimg.com/vi/" + id + "/default.jpg";
             }
             
         };

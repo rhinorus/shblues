@@ -1056,7 +1056,7 @@ h1{
 
 .mashups-center{
     height: 225px;
-    margin: 10px 0; 
+    margin-bottom: 10px;
 
     display: flex;
     justify-content: space-around;
@@ -1064,9 +1064,27 @@ h1{
 
 .mashups-bottom{
     height: 225px;
+    margin-bottom: 10px;
 
     display: flex;
     justify-content: space-around;
+}
+
+.mashups-addictional{
+    display: flex;
+    justify-content: flex-start;
+    width: 710px;
+}
+
+.mashups-addictional > .mashups-item{
+    padding: 0;
+    margin-right: 10px;
+    flex: auto;
+    margin-bottom: 10px;
+    max-width: 170px;
+}
+.mashups-addictional > .mashups-item:nth-child(4n){
+    margin-right: 0;
 }
 
 .mashups-item{
