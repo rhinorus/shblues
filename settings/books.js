@@ -1,4 +1,4 @@
-var books = [
-    'data/assets/books/book.pdf', // ссылка на первую книгу
-    'data/assets/books/book.pdf' // ссылка на вторую книгу
+var books = [ // Книги хранятся в /pdf/books. Путь указывается относительно файла /pdf/viewer.html
+    'books/book.pdf', // Первая книга
+    'books/book.pdf' // Вторая книга
 ]; 

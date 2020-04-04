@@ -8,6 +8,11 @@
     src: url(../data/assets/fonts/izvestija.ttf); 
 }
 
+@font-face {
+    font-family: gildia; 
+    src: url(../data/assets/fonts/gildia.ttf); 
+}
+ 
 html{
     height: 100%;
 }
@@ -35,11 +40,11 @@ h1{
 }
 
 @keyframes move-move {
-    0% { transform: rotate(-40deg); }
+    0% { transform: rotate(-20deg); }
     20% { transform: rotate(-14deg); }
     40% {transform: rotate(-24deg);}
     70% {transform: rotate(-10deg);}
-    100% { transform: rotate(-40deg); } 
+    100% { transform: rotate(-20deg); } 
 } 
 
 /* =============================
@@ -194,9 +199,14 @@ h1{
  
  .top-main-label{
     position: absolute;
-    top: 360px;
-    width: 210px;
-    z-index: 53;
+    top: 335px;
+
+    font-family: gildia;
+    font-size: 55px;
+    color: white;
+
+    letter-spacing: 0.03em;
+    cursor: default;
 }
  
 .top-disco-container > .menu-items-container {
@@ -245,8 +255,7 @@ h1{
     height: calc(1546px - 400px); 
     overflow: hidden;
 
-    background-image: url(../data/assets/images/wood.png);
-    background-size: 300px;
+    background-color: white;
 
 }   
 
@@ -255,11 +264,31 @@ h1{
     height: calc(1546px - 400px); 
 }
 
+.disco-background{
+    position: absolute;
+    width: 1400px;
+    height: 1000px;
+    left: -700px;
+
+    box-shadow: 10px 10px 0 0 grey;
+
+    border-bottom-left-radius: 2%;
+    border-bottom-right-radius: 2%;
+
+    border: 2px solid;
+    border-top: 0;
+
+    background-image: url(../data/assets/images/wood.png);
+    background-size: 300px;
+}
+
 .disco-img{
     position: absolute;
-    top: -238px;
+    top: -234px;
     height: 1200px;
     left: -600px;
+
+    pointer-events: none;
 
     animation: 4s rotate360 infinite linear;
 }
@@ -374,16 +403,98 @@ h1{
     position: absolute;
     left: 80px;
 }
-
+ 
 .main-label{
     position: absolute;
-    top: 215px;
+    top: 183px;
+    font-family: gildia;
+    font-size: 70px;
+    color: white;
+    letter-spacing: 0.03em;
+
+    cursor: default;
+}
+
+.languages-wrapper{
+    position: absolute;
+
+    box-shadow: 2px 2px 0 0;
+
+    top: 800px;
+    left: -640px;
+
+    width: 215px;
+    height: 140px;
+
+    border: 2px solid;
+    border-radius: 4%;
+
+    background-image: url(../data/assets/images/dark-texture.jpg);
+    background-size: 300px;
+}
+
+.languages-background{
+    height: 123px;
+    width: 60px;
+    position: absolute;
+    top: 809px;
+    background-color: gray;
+    left: -622px;
+    border: 2px solid gray;
+    background-size: 244px;
+    border-radius: 10px;
+
+    background-image: url("../data/assets/images/light-steel.jpg");
+}
+
+.language-label{
+    position: absolute;
+
+    left: -613px;
+    top: 818px;
+
+    height: 43px;
+
+    border: 2px solid;
+    border-radius: 50%;
+
+    box-shadow: 2px 2px 0 0;
+}
+
+.selected-language{
+    border: 3px solid white;
+}
+
+.english-language-label{
+    top: 878px;
+}
+
+.selector{
+    position: absolute;
+    left: -550px;
+    top: 815px;
+
+    cursor: pointer;
+
+    transform: rotate(95deg);
+    border: 1px solid black;
+    border-radius: 50%;
+
+    transition: 0.1s;
+}
+
+.selector.english-turn{
+    transform: rotate(25deg);
+}
+
+.selector:hover{
+    border: 3px solid white;
 }
 
 .heads-image{
     position: absolute;
     top: 15px;
-    width: 290px;
+    width: 270px;
     transform: rotate(6.42deg);
 }
 
@@ -1022,6 +1133,40 @@ h1{
     padding-top: 80px;;
 }
 
+.mashups-image-wrapper{
+    position: relative;
+    width: 350px;
+}
+
+.mashups-image-wrapper *{
+
+    backface-visibility: hidden;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    border: 2px solid black;
+    background-color: #D1C3C6;
+
+    position: absolute;
+}
+
+.mashups-image-wrapper div{
+    transform: rotateY(180deg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.mashups-image-wrapper:hover img{ 
+    transform: rotateY(180deg); 
+}
+
+.mashups-image-wrapper:hover div{
+    transform: rotateY(0deg);
+}
+
 .mashups-header{
     display: flex;
     justify-content: center;
@@ -1063,12 +1208,22 @@ h1{
 } 
 
 .mashups-bottom{
+    width: 710px;
     height: 225px;
     margin-bottom: 10px;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
+
+.mashups-bottom > *{
+    margin-right: 10px;
+}
+
+.mashups-bottom > .mashups-item:last-of-type{
+    margin-right: 0;
+}
+
 
 .mashups-addictional{
     display: flex;
@@ -1126,10 +1281,15 @@ h1{
 
     background-color: #D1C3C6;
 }
-
+ 
 .mashups-front{
     z-index: 2;
-    padding: 0 5px;
+    padding: 0 5px 5px 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .mashups-back{
@@ -1164,14 +1324,18 @@ h1{
 }
 
 .mashups-description{
-    margin: 10px 10px 5px 10px;
+    margin: 5px;
 
     font-size: 14px;
     line-height: 20px;
 }
 
+.mashups-front .mashups-description{
+    font-weight: bold;
+}
+
 .mashups-date{
-    margin-left: 10px;
+    margin: 0 10px;
 
     color: #898989;
     font-size: 12px;
@@ -1578,7 +1742,7 @@ md-dialog{
 }
 
 .md-dialog-container{
-    background-color: rgba(255,255,255,0.4) !important;
+    background-color: rgba(0,0,0,0.6) !important;
 }
 
 /* Video modal SECTION */
@@ -1672,20 +1836,21 @@ md-dialog{
 }
 
 .tv-arrow-right{
-
+    pointer-events: none;
     position: absolute;
     left: 0;
-    right: -452px;
+    right: -381px;
     top: 52px;
     bottom: 0;
 
-    margin: auto;
+    margin: auto; 
 }
 
 .tv-arrow-left{
+    pointer-events: none;
     position: absolute;
     left: 0;
-    right: -313px;
+    right: -381px;
     top: 274px;
     bottom: 0;
 
@@ -1928,4 +2093,32 @@ div#single-song-player img[data-amplitude-song-info="cover_art_url"] {
 width: 100%;
 border-top-right-radius: 10px;
 border-top-left-radius: 10px;
+}
+
+
+.music-off{
+    width: 74px;
+    height: 74px;
+    margin-left: 100px;
+    border: 1px solid #3e4254;
+    border-radius: 50%;
+    position: fixed;
+
+    cursor: pointer;
+}
+
+.music-off:before{
+    content: '';
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    margin: auto;
+
+    height: 25px;
+    width: 25px;
+    background-color: white;
 }

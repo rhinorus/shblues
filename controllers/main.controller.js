@@ -11,6 +11,7 @@ angular
         $scope.activeTrack = null; 
         $scope.isPlayerActive = false;
         $scope.amplitudeInited = false;
+        $scope.isEnglish = false; //load from cookies later
 
         //========================
         // Settings
@@ -19,6 +20,7 @@ angular
         $scope.videos = videos;
         $scope.tracks = tracks;
         $scope.mashups = mashups;
+        $scope.mashupsImages = mashupsImages;
         $scope.melodclamations = melodclamations;
         $scope.books = books;
         $scope.social = social;
@@ -259,10 +261,29 @@ angular
             }
 
               $scope.isPlayerActive = true;
+
+              var turnAudioOff = function(){
+                $timeout(function() {
+                    $scope.turnAudioOff();
+                }, 0);
+            };
+
               Amplitude.play();
               $timeout(function(){ 
                 $("#play-pause").addClass("amplitude-playing");
                 $("#play-pause").removeClass("amplitude-paused"); 
+
+                var controlContainer = document.getElementsByClassName("control-container")[0];
+                var stopButton = document.createElement("div");
+
+                var clickAttribute = document.createAttribute("ng-click");       
+                clickAttribute.value = "turnAudioOff()";    
+ 
+                stopButton.onclick = turnAudioOff;
+                stopButton.className = "music-off";
+
+                controlContainer.appendChild(stopButton);
+
               },0);
         };
  
@@ -274,6 +295,7 @@ angular
                 }
             },0);
         };
+ 
 
         $scope.showAnnouncements = function(){
 
@@ -359,6 +381,10 @@ angular
               }, function() {
                 // закрытие окна по клику вне
             });
+        };
+
+        $scope.toggleEnglish = function(){
+            $scope.isEnglish = !$scope.isEnglish;
         };
 
     });
